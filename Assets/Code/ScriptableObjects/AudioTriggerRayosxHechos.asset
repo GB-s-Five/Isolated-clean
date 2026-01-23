@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b63d75b3c176f34aaf6453042a0cf6f, type: 3}
+  m_Name: AudioTriggerRayosxHechos
+  m_EditorClassIdentifier: Assembly-CSharp::SOSubtitle
+  audioClip: {fileID: 8300000, guid: d301be1aff4941944b08f62b28ccdb6a, type: 3}
+  messageFragments:
+  - phrase: "\u2026I\u2019m\u2026 I\u2019m fine\u2026 physically\u2026 But-"
+    duration: 2.3
+  - phrase: "but\u2026 this\u2026 this doesn\u2019t make sense\u2026"
+    duration: 3.8
+  - phrase: "something\u2019s wrong\u2026But\u2026what?"
+    duration: 3.5

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b63d75b3c176f34aaf6453042a0cf6f, type: 3}
+  m_Name: AudioOrdenadorGrabadora1Final
+  m_EditorClassIdentifier: Assembly-CSharp::SOSubtitle
+  audioClip: {fileID: 8300000, guid: 37085c9e77ff27841ac56d42b8efe1a8, type: 3}
+  messageFragments:
+  - phrase: 'Patient report: Jackie Mahone, ten years old.'
+    duration: 4.5
+  - phrase: Admitted after a serious car accident.
+    duration: 3
+  - phrase: 'Current condition: deep coma, unresponsive. '
+    duration: 3.8
+  - phrase: 'Multiple fractures to the chest and collarbone. '
+    duration: 3
+  - phrase: "Both lungs bruised \u2014 breathing supported by machine. "
+    duration: 4
+  - phrase: "Vitals are unstable, but we\u2019re keeping him alive."
+    duration: 2.5
+  - phrase: "He\u2019s\u2026 critical. "
+    duration: 0.8
+  - phrase: "We\u2019ll keep monitoring. Every minute counts.\u201D"
+    duration: 4.5
