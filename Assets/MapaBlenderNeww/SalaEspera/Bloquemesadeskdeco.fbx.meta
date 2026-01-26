@@ -3,7 +3,317 @@ guid: d0a4179dedfc9d048bc29128df210412
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base color
+    second: {fileID: 2100000, guid: f0c55dbd041009e4daa8639bad150a07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Beige 1
+    second: {fileID: 2100000, guid: 61de1880659e60949ba3606fa67e6cee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: ba681457c2144f847a77ced6f3a3d6fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: 237340efc6a2b3e40bcf483bfc5cbacd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connector
+    second: {fileID: 2100000, guid: 4e715fbfa7714274ebefec2925818c9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connector socket
+    second: {fileID: 2100000, guid: 2def1f2af3f4be449b5008ee9f481142, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dials
+    second: {fileID: 2100000, guid: 5cea85b6adc06b943a437e03af54b711, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Feets
+    second: {fileID: 2100000, guid: 448fd5c4f00b1f94a91d40b88fc12c87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower-tulip  stalk.001
+    second: {fileID: 2100000, guid: 7dc71bb44e00add41a253007004f00b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower-tulip Leaves.001
+    second: {fileID: 2100000, guid: 621b387bb4d9c9748a382830ad835f87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower-tulip Petals.001
+    second: {fileID: 2100000, guid: b41a6ac2a422dd142bd894a4dab1e242, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GREY
+    second: {fileID: 2100000, guid: 213a60af49a59b94ba5ab52eeff9e5b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glossy
+    second: {fileID: 2100000, guid: 57608aea4f86c074d80a230ea44896c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green
+    second: {fileID: 2100000, guid: d7f403449f1b8f741b98b5972c0cfec9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Indicator
+    second: {fileID: 2100000, guid: 5bdf250a8a86a014a981d34e84b5668f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jug of flowers Glass
+    second: {fileID: 2100000, guid: 11a96fd8f9e2a96418045bf27ed6b05b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jug of flowers Water
+    second: {fileID: 2100000, guid: 0fe8eb4d50e995b44a681d15eec0a0dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Magenta
+    second: {fileID: 2100000, guid: 9ea739da4c9fdb84ab46d32a0e435019, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #9
+    second: {fileID: 2100000, guid: 02715c3effe1c3743b7167df7cda27c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.037
+    second: {fileID: 2100000, guid: 99b9e323911e659499bc2ed77965552b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.092
+    second: {fileID: 2100000, guid: 20a0186deba80394eb13f9787da7d110, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: 0c5038d6f328732489373c8555cec89b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper
+    second: {fileID: 2100000, guid: 5bb30a0788081b949bfa1ea46fd9dc9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pins
+    second: {fileID: 2100000, guid: a7b7ed927e6be3a4c862236040153c1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plexi
+    second: {fileID: 2100000, guid: 1154607a9bf3dad4396764d36c557ad8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: bb8123da790130c4ea56ee65e51f1c35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 8b44306a9f9375443b492c4674b4b5ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skyblue
+    second: {fileID: 2100000, guid: 33d22380c09242c47b1e6ac695e7520e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: cf95d3f75bba92a4fbc52ab3d1d5fc63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: beige 2
+    second: {fileID: 2100000, guid: e6924d2d01ce18d44bb51abbe6847960, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 08756552-e537-4550-ab85-8187b3d3d608
+    second: {fileID: 2800000, guid: cda54d14e8b516541a7d3ba5df298adf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base color_BaseColor
+    second: {fileID: 2800000, guid: dd7fee352a5260c4c830379e71248991, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base color_Metallic
+    second: {fileID: 2800000, guid: 92cbfe998933b2c49a4c751bebe1aed1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base color_Normal
+    second: {fileID: 2800000, guid: 0f1e42a0bb0a6974081a2f03672f6ce5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Base color_Roughness
+    second: {fileID: 2800000, guid: d286060c8c1d95241b13f29ef887a8bc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Connector socket_BaseColor
+    second: {fileID: 2800000, guid: de2021cc1410a3140a583bcfd5fed6e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Connector socket_Metallic
+    second: {fileID: 2800000, guid: b392c76aae024d84fa89e72faf877870, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Connector socket_Normal
+    second: {fileID: 2800000, guid: f974396a0c156774e918677d0b5c46f1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Connector socket_Roughness
+    second: {fileID: 2800000, guid: 9365f4cc69583184cbe024a7cc3fefd1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dials_BaseColor
+    second: {fileID: 2800000, guid: b9b9b0b9d12f6d144b64aa15b6b74253, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dials_Metallic
+    second: {fileID: 2800000, guid: f585ec5b8eea26f4a8da1fa3db129b11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dials_Normal
+    second: {fileID: 2800000, guid: 446f09ca95e81e54485168a3689a362c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dials_Roughness
+    second: {fileID: 2800000, guid: 344c9cb85f3891843b59da4c765b215b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Feets_BaseColor
+    second: {fileID: 2800000, guid: 63e651faf55a742469eeddbd1882bcf6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Feets_Metallic
+    second: {fileID: 2800000, guid: 360fdf9b19a5a0f47bc105c8ab89c7b8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Feets_Normal
+    second: {fileID: 2800000, guid: 5d67a45c1b1148f4087fe66c87ef6117, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Feets_Roughness
+    second: {fileID: 2800000, guid: 565fe95573b1146498e744ddc710fbbc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Leaves0127_L-02
+    second: {fileID: 2800000, guid: 5b9ffdc28e3006c4b96dc33d6d383d10, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paper_BaseColor
+    second: {fileID: 2800000, guid: 0f739c875e678a84a94fa19d3fa420a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paper_Metallic
+    second: {fileID: 2800000, guid: 46972df973a0cbd41a3f0b95cc7638a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paper_Normal
+    second: {fileID: 2800000, guid: d748b3eb9b24518469e07865da1241b0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Paper_Roughness
+    second: {fileID: 2800000, guid: 3fb5b58ddfbe9ad4c86377363638f3ad, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pins_BaseColor
+    second: {fileID: 2800000, guid: 191537885e5baa44588d1599b7cef9fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pins_Metallic
+    second: {fileID: 2800000, guid: 6581148c650f64447937190ad15124f2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pins_Normal
+    second: {fileID: 2800000, guid: 9f3532a0d51f5554085149059e0976ea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pins_Roughness
+    second: {fileID: 2800000, guid: 8230d86776cd7ae4b8d3948549b07db4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: R.957fc7db17e95773db4ecf2b4212ef89
+    second: {fileID: 2800000, guid: c10cc3d322c18624c870a4d19766a3a6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: apple_macintosh_plus-rear
+    second: {fileID: 2800000, guid: 95d5316b1b8379a44b889db177d99ad7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dust_4_2K
+    second: {fileID: 2800000, guid: bcd25f4dac116aa459ed132adf057685, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: houndstooth-fabric-weave_Roughness
+    second: {fileID: 2800000, guid: c1d7d55e87ec4fb408d540db9efba357, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: houndstooth-fabric-weave_metallic
+    second: {fileID: 2800000, guid: 09a7a60ed90a6c447ba0f61132a4db29, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: houndstooth-fabric-weave_normal-ogl
+    second: {fileID: 2800000, guid: af9895e1c203b88468bdeffc4b59d2f5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

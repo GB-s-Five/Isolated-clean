@@ -3,7 +3,72 @@ guid: 1f3ef52823857b4488e7d1cbc1136233
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black.002
+    second: {fileID: 2100000, guid: 91c7501dc2eeb464a82f46453730c0a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black.005
+    second: {fileID: 2100000, guid: 751d7f97b78a96945a8e7c70d554de2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frame_Black.011
+    second: {fileID: 2100000, guid: c5c2efbffab4a7544a5a22fc76b72fc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frame_Black.015
+    second: {fileID: 2100000, guid: c4d09bf79e70d47449d15948386f163d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Photo_mountain_view.001
+    second: {fileID: 2100000, guid: 38257785650280d4786818eb054b2d53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Photo_old_town.001
+    second: {fileID: 2100000, guid: db17313004a7752498bb728b1465a11a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Satin Brass.001
+    second: {fileID: 2100000, guid: 7cbef93ee014ef54fa15c28ab6f77a53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Satin Brass.004
+    second: {fileID: 2100000, guid: a4ff710382405b1429f3592cbbc47173, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.002
+    second: {fileID: 2100000, guid: 2b76779347d9aaa40872f5da385e73b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.003
+    second: {fileID: 2100000, guid: 7b21450259128994fa98d94216fc250b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.004
+    second: {fileID: 2100000, guid: 9db7d9f05d0c53b4d9e057a875bc8a77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.007
+    second: {fileID: 2100000, guid: 6b45fb9f0d94fc84c9f3911d989f821c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Brass_Metal1_4K-JPG_NormalGL
+    second: {fileID: 2800000, guid: cd010399bd3642843b29eb1bdb116755, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

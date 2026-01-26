@@ -3,7 +3,52 @@ guid: 8112aeb1a5d09024cb1b312502b0e37d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.073
+    second: {fileID: 2100000, guid: fef8eb404d1c5d14b95c265a6ed589c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skyblue
+    second: {fileID: 2100000, guid: 637efef64f291954097bed7dd68d7e8c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: diagonal-stripe-weave_albedo
+    second: {fileID: 2800000, guid: 40a911bab7104374db5e175c85b1f352, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: diagonal-stripe-weave_metallic
+    second: {fileID: 2800000, guid: 65a4a6d7730afba43a3114401347d410, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: diagonal-stripe-weave_normal-ogl
+    second: {fileID: 2800000, guid: 07e65ed1c4cd7d547a7386f6f5e3bff4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: diagonal-stripe-weave_roughness
+    second: {fileID: 2800000, guid: c069e02efb43df347aa19dc9a8eee9f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: houndstooth-fabric-weave_Roughness
+    second: {fileID: 2800000, guid: 67687f8a65ffd234ab875fc928b04df8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: houndstooth-fabric-weave_metallic
+    second: {fileID: 2800000, guid: a9c66d9e3aefda8448de6bb7ff1654a9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: houndstooth-fabric-weave_normal-ogl
+    second: {fileID: 2800000, guid: f3d9cfe524157d543836914009cada7a, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
