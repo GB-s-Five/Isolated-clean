@@ -115,7 +115,10 @@ public class PlayerInteraction : MonoBehaviour
     // HideUI(): Oculta el HUD cuando no hay objeto seleccionado
     private void HideUI()
     {
-        interactionUI.alpha = 0;
-        interactionUI.blocksRaycasts = false;
+        if (interactionUI != null)
+        {
+            interactionUI.alpha = 0;
+            interactionUI.blocksRaycasts = false;
+        }
     }
 }

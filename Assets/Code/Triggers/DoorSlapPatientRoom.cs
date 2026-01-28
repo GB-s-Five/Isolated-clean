@@ -8,7 +8,7 @@ public class DoorSlapPatientRoom : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioSource doorSlapAudio;
-
+    
     [Header("Puerta")]
     [SerializeField] private Transform puerta; // La puerta que se cierra
     [SerializeField] private float velocidadCierre = 0.5f; // Tiempo de cierre (rápido para portazo)
@@ -40,8 +40,10 @@ public class DoorSlapPatientRoom : MonoBehaviour
                 {
                     Debug.LogWarning("No se asignó la puerta en el campo 'Puerta'.");
                 }
-
+                
                 hasTriggered = true;
+                //Checkpoint
+                Checkpointmanager.Instance.SaveInstance(PlayerProgress.Instance.inspectedObjects,this.transform.position);
             }
         }
     }
