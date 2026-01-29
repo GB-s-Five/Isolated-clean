@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ce7c96e-a332-4e42-b07a-109351ce7d2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/PlayerScripts/PlayerProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/PlayerScripts/PlayerProgress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Progression/Checkpointmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Progression/Checkpointmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ScriptPlayerLive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ScriptPlayerLive.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Triggers/AfterXRayAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Triggers/AfterXRayAudio.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Triggers/DoorSlapPatientRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Triggers/DoorSlapPatientRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +33,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Rebasing joel",
+    "git-widget-placeholder": "joel",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
