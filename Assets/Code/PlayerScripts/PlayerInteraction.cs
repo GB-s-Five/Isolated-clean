@@ -21,6 +21,10 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] private PlayerMovement playerMovement; // Movimiento jugador
     [SerializeField] private PlayerLook playerLook; // Movimiento jugador
+    [SerializeField] private FootstepsController footstepsController; // Sonido jugador
+
+    [SerializeField] private HeadBobSystem headBobSystem; // Sonido jugador
+
     [SerializeField] private Volume postProcessingVolume;
 
 
@@ -91,7 +95,13 @@ public class PlayerInteraction : MonoBehaviour
 
                 if (playerMovement != null)
                     inspectable.SetPlayerMovement(playerMovement);
+
+                if (footstepsController != null)
+                    inspectable.SetFootstepsController(footstepsController);
                     
+                if (headBobSystem != null)
+                    inspectable.SetHeadBob(headBobSystem);
+
                 if (postProcessingVolume != null)
                     inspectable.SetPostProcessingVolume(postProcessingVolume);
 
