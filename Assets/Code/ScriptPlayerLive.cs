@@ -115,6 +115,8 @@ public class ScriptPlayerLive : MonoBehaviour
         if (Checkpointmanager.Instance.playerPosition != new Vector3()) //checkpoint en vigor
         {
             Debug.Log("checkpoint existente");
+            rb.linearVelocity = Vector3.zero; 
+            rb.angularVelocity = Vector3.zero;
             rb.position = Checkpointmanager.Instance.playerPosition;
             PlayerProgress.Instance.inspectedObjects = Checkpointmanager.Instance.savedIDs;
         }
