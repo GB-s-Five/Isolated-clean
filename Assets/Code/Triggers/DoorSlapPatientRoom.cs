@@ -43,6 +43,7 @@ public class DoorSlapPatientRoom : MonoBehaviour
                 
                 hasTriggered = true;
                 //Checkpoint
+                Debug.Log("Potazo. Checkpoint alcanzado");
                 Checkpointmanager.Instance.SaveInstance(PlayerProgress.Instance.inspectedObjects,this.transform.position);
             }
         }

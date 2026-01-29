@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ce7c96e-a332-4e42-b07a-109351ce7d2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Progression/dieauto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Progression/dieauto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/PlayerScripts/PlayerProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/PlayerScripts/PlayerProgress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Progression/Checkpointmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Progression/Checkpointmanager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/ScriptPlayerLive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ScriptPlayerLive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Triggers/DoorSlapPatientRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Triggers/DoorSlapPatientRoom.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769624325631</updated>
       <workItem from="1769624327517" duration="4733000" />
-      <workItem from="1769696688631" duration="3608000" />
+      <workItem from="1769696688631" duration="3008000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SearchService;
 using UnityEngine;
@@ -22,10 +23,17 @@ public class ScriptPlayerLive : MonoBehaviour
     private LensDistortion lensDistortion;
     private ChromaticAberration chromaticAberration;
 
-    public void Start()
+    public void Awake() //asignar una posicion al jugador
     {
-        rb = GetComponent<Rigidbody>();
+        if (Checkpointmanager.Instance.playerPosition != new Vector3())
+        {
+            rb = GetComponent<Rigidbody>();
+            rb.linearVelocity = Vector3.zero; 
+            rb.angularVelocity = Vector3.zero;
+            rb.position = Checkpointmanager.Instance.playerPosition;
+        }
     }
+    
 
     // -----------------------------
     //     RECIBIR DA�O
@@ -115,11 +123,10 @@ public class ScriptPlayerLive : MonoBehaviour
         if (Checkpointmanager.Instance.playerPosition != new Vector3()) //checkpoint en vigor
         {
             Debug.Log("checkpoint existente");
-            rb.linearVelocity = Vector3.zero; 
-            rb.angularVelocity = Vector3.zero;
-            rb.position = Checkpointmanager.Instance.playerPosition;
+            //Debug.LogWarning(Checkpointmanager.Instance.playerPosition);
             PlayerProgress.Instance.inspectedObjects = Checkpointmanager.Instance.savedIDs;
-        }
+        } else 
+            PlayerProgress.Instance.inspectedObjects.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

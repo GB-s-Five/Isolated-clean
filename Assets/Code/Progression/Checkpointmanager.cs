@@ -6,7 +6,7 @@ public class Checkpointmanager : MonoBehaviour
     public static Checkpointmanager Instance;
 
     public HashSet<string> savedIDs = new HashSet<string>(); //zero tags
-    public Vector3 playerPosition; //starting pos
+    public Vector3 playerPosition = new Vector3(); //starting pos
     
     private void Awake()
     {
