@@ -22,6 +22,8 @@ public class InspectableObject : MonoBehaviour, IInteractable
     private GameObject interactionUIObject;
 
     private PlayerMovement playerMovement;
+    private FootstepsController footstepsController;
+    private HeadBobSystem headbob;
     private PlayerLook playerLook;
     private Transform playerCamera;
 
@@ -62,6 +64,10 @@ public class InspectableObject : MonoBehaviour, IInteractable
 
     public void SetPlayerMovement(PlayerMovement movement) => playerMovement = movement;
     public void SetPlayerLook(PlayerLook look) => playerLook = look;
+
+    public void SetHeadBob(HeadBobSystem bob) => headbob = bob;
+
+    public void SetFootstepsController(FootstepsController steps) => footstepsController = steps;
     public void SetInteractionUI(GameObject ui) => interactionUIObject = ui;
 
     public void SetPostProcessingVolume(Volume vol)
@@ -145,6 +151,9 @@ public class InspectableObject : MonoBehaviour, IInteractable
 
         if (playerMovement != null) playerMovement.enabled = false;
         if (playerLook != null) playerLook.enabled = false;
+        if (headbob != null) headbob.enabled = false;
+        if (footstepsController != null) footstepsController.enabled = false;
+
 
         if (boxCollider != null) boxCollider.enabled = false;
         if (interactionUIObject != null) HideUI(interactionUIObject);
@@ -230,6 +239,10 @@ public class InspectableObject : MonoBehaviour, IInteractable
 
         if (playerMovement != null) playerMovement.enabled = true;
         if (playerLook != null) playerLook.enabled = true;
+        if (headbob != null) headbob.enabled = true;
+        if (footstepsController != null) footstepsController.enabled = true;
+
+
         if (boxCollider != null) boxCollider.enabled = true;
 
         if (inspectionPanel != null)
