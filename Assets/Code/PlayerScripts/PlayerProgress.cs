@@ -5,7 +5,7 @@ public class PlayerProgress : MonoBehaviour
 {
     public static PlayerProgress Instance;
 
-    private HashSet<string> inspectedObjects = new HashSet<string>();
+   [SerializeField] public HashSet<string> inspectedObjects = new HashSet<string>();
 
     // Singleton basico
     private void Awake()

@@ -46,7 +46,9 @@ public class AfterXRayAudio : MonoBehaviour
             }
 
             PlayerProgress.Instance.RegisterInspection(idToGive);
-
+            //Checkpoint
+            Debug.Log("Checkpoint alcanzado");
+            Checkpointmanager.Instance.SaveInstance(PlayerProgress.Instance.inspectedObjects,this.transform.position);
             Invoke(nameof(PlayRing), audioSource.clip.length);
 
 

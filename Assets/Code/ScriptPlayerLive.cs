@@ -1,9 +1,12 @@
+using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using Scene = UnityEngine.SceneManagement.Scene;
 
 public class ScriptPlayerLive : MonoBehaviour
 {
@@ -15,11 +18,22 @@ public class ScriptPlayerLive : MonoBehaviour
     [Header("Post Processing")]
     public Volume postProcessVolume;
 
+    private Rigidbody rb;
     private Vignette vignette;
     private LensDistortion lensDistortion;
     private ChromaticAberration chromaticAberration;
 
-
+    public void Awake() //asignar una posicion al jugador
+    {
+        if (Checkpointmanager.Instance.playerPosition != new Vector3())
+        {
+            rb = GetComponent<Rigidbody>();
+            rb.linearVelocity = Vector3.zero; 
+            rb.angularVelocity = Vector3.zero;
+            rb.position = Checkpointmanager.Instance.playerPosition;
+        }
+    }
+    
 
     // -----------------------------
     //     RECIBIR DA�O
@@ -104,17 +118,16 @@ public class ScriptPlayerLive : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
-        Debug.Log("El jugador ha muerto.");
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
-        
-        //transform.position = new Vector3(20.6430702f,1.01699996f,18.1334991f);
-        //transform.rotation = Quaternion.identity;
+        if (Checkpointmanager.Instance.playerPosition != new Vector3()) //checkpoint en vigor
+        {
+            Debug.Log("checkpoint existente");
+            //Debug.LogWarning(Checkpointmanager.Instance.playerPosition);
+            PlayerProgress.Instance.inspectedObjects = Checkpointmanager.Instance.savedIDs;
+        } else 
+            PlayerProgress.Instance.inspectedObjects.Clear();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 
