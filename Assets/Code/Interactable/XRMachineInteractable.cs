@@ -9,6 +9,7 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
     [Header("Trigger to activate after machine")]
     [SerializeField] private GameObject childTrigger;
 
+    [SerializeField] private GameObject xrayImage;
     private bool isInteractable = false;
     private bool hasInteracted = false; // evita repetir la interacción
     [SerializeField] private PlayerMovement playerMovement; //para el movimiento del jugador
@@ -87,6 +88,11 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
         {
             childTrigger.SetActive(true);
             Debug.Log($"{name}: Child trigger activated.");
+        }
+         if (xrayImage != null)
+        {
+            xrayImage.SetActive(true);
+            Debug.Log($"{name}: xrayImageactivated.");
         }
     }
     
