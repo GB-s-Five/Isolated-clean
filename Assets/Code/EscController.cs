@@ -5,7 +5,6 @@ using TMPro;
 public class EscController : MonoBehaviour
 {
     public GameObject MenuESC;
-    public AudioSource sonidoPausa;
     private bool isPaused = false;
     public static EscController instance;
     private void Awake()
