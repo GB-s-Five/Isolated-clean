@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float leanSmooth = 10f;
 
     private PlayerControls controls;
-    private Rigidbody rb;
+    public Rigidbody rb;
     private Vector2 moveInput;
     private float leanInput = 0f;
     private bool isSprinting = false;

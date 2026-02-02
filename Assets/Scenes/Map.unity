@@ -26901,6 +26901,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 656129670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &212432504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8944864696358001591, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
+  m_PrefabInstance: {fileID: 1444354946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &212432506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212432504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec94bf8feb554374a906942437a84529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
+  objectID: InspectableItem
+  inspectableLight: {fileID: 0}
+  distanceFromCamera: 0.8
+  moveDuration: 0.35
+  rotationSpeed: 120
+  floatStrength: 0.025
+  floatSpeed: 2
+  inspectionScale: 0.3
 --- !u!1 &212679560
 GameObject:
   m_ObjectHideFlags: 0
@@ -76137,6 +76162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
   objectID: LightMessage
+  inspectableLight: {fileID: 0}
   distanceFromCamera: 0.15
   moveDuration: 0.35
   rotationSpeed: 120
@@ -91787,6 +91813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
   objectID: FamiliarPhoto
+  inspectableLight: {fileID: 0}
   distanceFromCamera: 0.2
   moveDuration: 0.35
   rotationSpeed: 120
@@ -102937,6 +102964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
   objectID: LightMessage
+  inspectableLight: {fileID: 0}
   distanceFromCamera: 0.8
   moveDuration: 0.35
   rotationSpeed: 120
@@ -109138,6 +109166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
   objectID: MedicalReport
+  inspectableLight: {fileID: 1224475753}
   distanceFromCamera: 0.15
   moveDuration: 0.35
   rotationSpeed: 120
@@ -166427,6 +166456,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1147341052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1224475753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826803679229254971, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+  m_PrefabInstance: {fileID: 2142630245305699237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224811421
 GameObject:
   m_ObjectHideFlags: 0
@@ -191487,6 +191521,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 9.298002
       objectReference: {fileID: 0}
+    - target: {fileID: 8391255556539142203, guid: b0fb6f0022e37674ca7033e78eae383c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b03675ae5db55c344855546fdb67a5b4, type: 2}
     - target: {fileID: 8614371469583642526, guid: b0fb6f0022e37674ca7033e78eae383c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -482.89
@@ -198269,6 +198307,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.04529
       objectReference: {fileID: 0}
+    - target: {fileID: -2117519578146669194, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01601
+      objectReference: {fileID: 0}
+    - target: {fileID: -2117519578146669194, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04125
+      objectReference: {fileID: 0}
+    - target: {fileID: -2117519578146669194, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00792
+      objectReference: {fileID: 0}
     - target: {fileID: -1128181798824864372, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -198433,6 +198483,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4179068995096757228, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1444354961}
+    - targetCorrespondingSourceObject: {fileID: 8944864696358001591, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 212432506}
     - targetCorrespondingSourceObject: {fileID: -2469209354101852788, guid: 189ab1b5bc7d5064f8e70e42724a51dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1444354960}
@@ -207285,8 +207338,16 @@ PrefabInstance:
       value: 0.00494
       objectReference: {fileID: 0}
     - target: {fileID: 7739928388064824102, guid: 87a13a0545ebcc34fb02b51c2d3bc163, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 65.83464
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739928388064824102, guid: 87a13a0545ebcc34fb02b51c2d3bc163, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -457.745
+      value: -457.7441
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739928388064824102, guid: 87a13a0545ebcc34fb02b51c2d3bc163, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.408
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -253872,6 +253933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
   objectID: FamiliarPhoto
+  inspectableLight: {fileID: 1224475753}
   distanceFromCamera: 0.5
   moveDuration: 0.35
   rotationSpeed: 40
@@ -291596,6 +291658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
   objectID: ViewXray
+  inspectableLight: {fileID: 0}
   distanceFromCamera: 0.2
   moveDuration: 0.35
   rotationSpeed: 120
@@ -304813,7 +304876,6 @@ GameObject:
   - component: {fileID: 4693764360695150548}
   - component: {fileID: 4024192817520449988}
   - component: {fileID: 6907802563920444529}
-  - component: {fileID: 6907802563920444530}
   m_Layer: 0
   m_Name: Picture Frame
   m_TagString: Untagged
@@ -306805,6 +306867,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 26854988996884109, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_Range
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413415872097865732, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413415872097865732, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413415872097865732, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413415872097865732, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3410427285721250681, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: playerLook
       value: 
@@ -314798,25 +314880,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6907802563920444530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109365136880583897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec94bf8feb554374a906942437a84529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InspectableObject
-  objectID: InspectableItem
-  distanceFromCamera: 0.8
-  moveDuration: 0.35
-  rotationSpeed: 120
-  floatStrength: 0.025
-  floatSpeed: 2
-  inspectionScale: 0.3
 --- !u!4 &6917834065073612263
 Transform:
   m_ObjectHideFlags: 0
