@@ -9,6 +9,8 @@ public class InspectableObject : MonoBehaviour, IInteractable
     [Header("Inspectable Object ID")]
     [SerializeField] private string objectID = "InspectableItem";
 
+    [SerializeField] private GameObject inspectableLight;
+
     [Header("Inspection Settings")]
     public float distanceFromCamera = 0.8f;
     public float moveDuration = 0.35f;
@@ -31,7 +33,9 @@ public class InspectableObject : MonoBehaviour, IInteractable
     private Vector3 originalPos;
     private Quaternion originalRot;
     private Vector3 originalScale;
+
     private bool inspecting = false;
+    private Coroutine endRoutine;
 
     // URP Volume
     private Volume postVolume;
@@ -90,6 +94,12 @@ public class InspectableObject : MonoBehaviour, IInteractable
             ui.SetActive(false);
     }
 
+    private void Awake()
+    {
+        originalPos = transform.position;
+    }
+
+    
     private void Start()
     {
         playerCamera = Camera.main.transform;
@@ -116,9 +126,12 @@ public class InspectableObject : MonoBehaviour, IInteractable
             transform.Rotate(Vector3.right, my * rotationSpeed * Time.deltaTime, Space.World);
         }
 
-        // Salir con click derecho
-        if (Mouse.current.rightButton.wasPressedThisFrame)
-            StartCoroutine(EndInspection());
+       // Si esta inspeccionando y el click derecho esta presionado y endRoutine es igual a null comienta EndInspection.
+       if (inspecting && Mouse.current.rightButton.wasPressedThisFrame && endRoutine == null)
+        {
+            endRoutine = StartCoroutine(EndInspection());
+        }
+
 
         // Flotación
         transform.position += Vector3.up * Mathf.Sin(Time.time * floatSpeed) * floatStrength * Time.deltaTime;
@@ -131,6 +144,7 @@ public class InspectableObject : MonoBehaviour, IInteractable
     {
         if (!inspecting)
         {
+            isInspectionable = false; // Bloquea interacción
             PlayerProgress.Instance.RegisterInspection(objectID);
             StartCoroutine(StartInspection());
         }
@@ -143,16 +157,22 @@ public class InspectableObject : MonoBehaviour, IInteractable
 
     private IEnumerator StartInspection()
     {
+        if (inspectableLight != null) inspectableLight.SetActive(true);
+        if (playerMovement != null) {
+            playerMovement.rb.linearVelocity=Vector3.zero;
+            playerMovement.enabled = false;
+            }
+        if (playerLook != null) playerLook.enabled = false;
+        if (headbob != null) headbob.enabled = false;
+        if (footstepsController != null) footstepsController.enabled = false;
+
         inspecting = true;
 
         originalPos = transform.position;
         originalRot = transform.rotation;
         originalScale = transform.localScale;
 
-        if (playerMovement != null) playerMovement.enabled = false;
-        if (playerLook != null) playerLook.enabled = false;
-        if (headbob != null) headbob.enabled = false;
-        if (footstepsController != null) footstepsController.enabled = false;
+        
 
 
         if (boxCollider != null) boxCollider.enabled = false;
@@ -236,7 +256,7 @@ public class InspectableObject : MonoBehaviour, IInteractable
         transform.position = originalPos;
         transform.rotation = originalRot;
         transform.localScale = originalScale;
-
+          if (inspectableLight != null) inspectableLight.SetActive(false);
         if (playerMovement != null) playerMovement.enabled = true;
         if (playerLook != null) playerLook.enabled = true;
         if (headbob != null) headbob.enabled = true;
@@ -259,6 +279,8 @@ public class InspectableObject : MonoBehaviour, IInteractable
 
         //EnablePostFX(false);
         inspecting = false;
+        isInspectionable = true; // Ahora sí puede volver a interactuar
+        endRoutine = null; // Se devuelve que la rutina es null
     }
 
     // -------------------------------
