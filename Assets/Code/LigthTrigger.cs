@@ -8,14 +8,17 @@ public class LigthTrigger : MonoBehaviour
 
     private SphereCollider spCol;
     private Transform playerInside; // Player actualmente dentro del trigger
-    private Renderer objRenderer;
+    [SerializeField] private Renderer objRenderer;
+    [SerializeField] private Transform puntoDaño;
 
     void Start()
     {
 
         TriggerAudioThenAlarma.LightsEvent += TurnUpDwonLigths;
 
-        objRenderer = GetComponent<Renderer>();
+        // Obtener el Renderer del objeto padre
+        objRenderer = GetComponentInParent<Renderer>();
+
         spCol = GetComponent<SphereCollider>();
 
         if (spCol == null)
@@ -82,7 +85,7 @@ public class LigthTrigger : MonoBehaviour
         if (cam == null) return 0f;
 
         // Centro visual del mesh
-        Vector3 worldCenter = objRenderer.bounds.center;
+        Vector3 worldCenter = puntoDaño.position;
 
         // Convertir a coordenadas del viewport (0-1)
         Vector3 viewportPos = cam.WorldToViewportPoint(worldCenter);

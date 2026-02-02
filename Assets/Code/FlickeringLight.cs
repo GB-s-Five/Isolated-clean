@@ -4,6 +4,7 @@ using System.Collections;
 public class FlickeringLight : MonoBehaviour
 {
     public Light flickerLight;
+    public Light secondaryLight;
 
     [Header("Timing")]
     public float minOnTime = 0.05f;
@@ -38,6 +39,8 @@ public class FlickeringLight : MonoBehaviour
                 for (int i = 0; i < glitchCount; i++)
                 {
                     flickerLight.enabled = !flickerLight.enabled;
+                    if (secondaryLight)
+                        secondaryLight.enabled = flickerLight.enabled;
                     flickerLight.intensity = Random.Range(minIntensity, maxIntensity);
                     yield return new WaitForSeconds(Random.Range(0.02f, 0.08f));
                 }
@@ -45,10 +48,14 @@ public class FlickeringLight : MonoBehaviour
 
             // Normal flicker behavior
             flickerLight.enabled = true;
+            if (secondaryLight)
+                secondaryLight.enabled = true;
             flickerLight.intensity = Random.Range(minIntensity, maxIntensity);
             yield return new WaitForSeconds(Random.Range(minOnTime, maxOnTime));
 
             flickerLight.enabled = false;
+            if (secondaryLight)
+                secondaryLight.enabled = false;
             yield return new WaitForSeconds(Random.Range(minOffTime, maxOffTime));
         }
     }

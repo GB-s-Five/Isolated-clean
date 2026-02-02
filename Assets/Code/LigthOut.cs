@@ -12,7 +12,7 @@ public class LightOut : MonoBehaviour
     {
         if (other.CompareTag("Player") && door.isOpen)
         {
-           // Debug.Log("Comparacion correcta condiciones para apagar la luz correctas");
+            //Debug.Log("Comparacion correcta condiciones para apagar la luz correctas");
             Invoke(nameof(DisableObject), 3f);
         } //else Debug.Log("No se cumplen condiciones");
     }
@@ -20,6 +20,21 @@ public class LightOut : MonoBehaviour
     void DisableObject()
     {
         gameObject.SetActive(false);
-       // Debug.Log("LUZ APAGADA");
+
+        //Obtener el padre del gameObject actual
+        Transform parentTransform = transform.parent;
+
+        //Desactivar los hijos del padre que tengan un Light component
+        foreach (Transform child in parentTransform)
+        {
+            Light lightComponent = child.GetComponent<Light>();
+            if (lightComponent != null)
+            {
+                lightComponent.enabled = false;
+            }
+        }
+
+
+        //Debug.Log("LUZ APAGADA");
     }
 }
