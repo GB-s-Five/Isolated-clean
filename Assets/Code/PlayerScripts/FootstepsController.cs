@@ -50,6 +50,8 @@ public class FootstepsController : MonoBehaviour
 
     private bool IsMoving()
     {
+        if (!enabled) return false; // si el script esta desactivado retorna false por lo que nunca llega a leer que las letras estan presionadas.
+        
         return Keyboard.current.wKey.isPressed ||
                Keyboard.current.aKey.isPressed ||
                Keyboard.current.sKey.isPressed ||

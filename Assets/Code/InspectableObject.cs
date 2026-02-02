@@ -210,8 +210,8 @@ public class InspectableObject : MonoBehaviour, IInteractable
             if (chroma != null) chroma.intensity.value = 0.4f * lerp;
             if (vignette != null)
             {
-                vignette.intensity.value = 0.3f * lerp;
-                vignette.smoothness.value = 0.3f * lerp;
+               // vignette.intensity.value = 0.3f * lerp;
+                //vignette.smoothness.value = 0.3f * lerp;
             }
 
             yield return null;
@@ -246,8 +246,8 @@ public class InspectableObject : MonoBehaviour, IInteractable
             if (chroma != null) chroma.intensity.value = 0.4f * (1f - lerp);
             if (vignette != null)
             {
-                vignette.intensity.value = 0.3f * (1f - lerp);
-                vignette.smoothness.value = 0.3f * (1f - lerp);
+               // vignette.intensity.value = 0.3f * (1f - lerp);
+                //vignette.smoothness.value = 0.3f * (1f - lerp);
             }
 
             yield return null;
@@ -256,7 +256,8 @@ public class InspectableObject : MonoBehaviour, IInteractable
         transform.position = originalPos;
         transform.rotation = originalRot;
         transform.localScale = originalScale;
-          if (inspectableLight != null) inspectableLight.SetActive(false);
+        
+        if (inspectableLight != null) inspectableLight.SetActive(false);
         if (playerMovement != null) playerMovement.enabled = true;
         if (playerLook != null) playerLook.enabled = true;
         if (headbob != null) headbob.enabled = true;
@@ -297,11 +298,13 @@ public class InspectableObject : MonoBehaviour, IInteractable
         }
         if (vignette != null)
         {
-            vignette.active = enable;
+            //vignette.active = enable;
+            //vignette.color.value = new Color(128, 128f,128f);
+
             if (enable)
             {
-                vignette.intensity.value = 0.3f;
-                vignette.smoothness.value = 0.3f;
+              //  vignette.intensity.value = 0.3f;
+               // vignette.smoothness.value = 0.3f;
             }
         }
     }

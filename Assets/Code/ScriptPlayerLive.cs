@@ -102,6 +102,8 @@ public class ScriptPlayerLive : MonoBehaviour
         {
             vignette.intensity.value = Mathf.Lerp(0f, 1f, t);
             vignette.smoothness.value = Mathf.Lerp(0f, 1f, t);
+            vignette.color.value = new Color(160, 0f, 0f);
+
         }
 
         // LENS DISTORTION (mareo / deformaci�n de bordes)
