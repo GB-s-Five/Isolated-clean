@@ -120,6 +120,7 @@ public class LigthTrigger : MonoBehaviour
         if (GetComponent<FlickeringLight>() != null)
         {
             GetComponent<FlickeringLight>().enabled = stateLigths;
+
         }
         else
         {

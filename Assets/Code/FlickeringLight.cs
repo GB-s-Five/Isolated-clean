@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class FlickeringLight : MonoBehaviour
 {
@@ -18,13 +19,17 @@ public class FlickeringLight : MonoBehaviour
 
     [Header("Chance of Big Glitch")]
     public float glitchChance = 0.15f;
-
-    void Start()
+    private void OnEnable()
     {
         if (!flickerLight)
             flickerLight = GetComponent<Light>();
 
         StartCoroutine(FlickerRoutine());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(FlickerRoutine());
     }
 
     IEnumerator FlickerRoutine()
