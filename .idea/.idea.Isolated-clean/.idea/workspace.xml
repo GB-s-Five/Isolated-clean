@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce7c96e-a332-4e42-b07a-109351ce7d2d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Isolated-clean/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/TriggerSonido.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/TriggerSonido.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/HauntAOE SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/HauntAOE SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +110,8 @@
       <workItem from="1769624327517" duration="4733000" />
       <workItem from="1769696688631" duration="3008000" />
       <workItem from="1770055963727" duration="5000" />
-      <workItem from="1770055974453" duration="2404000" />
+      <workItem from="1770055974453" duration="5934000" />
+      <workItem from="1770129027156" duration="1101000" />
     </task>
     <servers />
   </component>

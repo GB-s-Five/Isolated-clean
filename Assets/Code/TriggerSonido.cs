@@ -1,17 +1,21 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class TriggerSonido : MonoBehaviour
 {
-    [Header("Configuración del sonido")]
-    public SOSubtitle soSubtitle;               // Aquí arrastras el sonido que quieras
-    public bool reproducirUnaVez = true; // Si quieres que solo suene la primera vez
+    [Header("Configuraciï¿½n del sonido")]
+    public SOSubtitle soSubtitle;               // Aquï¿½ arrastras el sonido que quieras
     public bool fadeIn = false;          // Fade suave al entrar (opcional)
     public float tiempoFade = 1f;
     public float volumen = 1f;
-
+    public List<String> requiredIDs;
+    public string endID = "";
     private AudioSource fuente;
-    private bool yaSonó = false;
+    private bool canTrigger = true;
+    
+    
 
     private void Awake()
     {
@@ -30,17 +34,25 @@ public class TriggerSonido : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        canTrigger = true;
         if (!other.CompareTag("Player")) return;
-        if (reproducirUnaVez && yaSonó) return;
-
-        yaSonó = true;
-        fuente.volume = 0f;
-        fuente.Play();
-        SubtitleManager.Instance.Show(soSubtitle);
-        if (fadeIn)
-            StartCoroutine(FadeIn());
-        else
-            fuente.volume = volumen;
+        if (PlayerProgress.Instance.HasInspected(endID)) return;
+        foreach (String iD in requiredIDs)
+            if (!PlayerProgress.Instance.HasInspected(iD))
+            {
+                canTrigger = false;
+                break;
+            }
+        if (canTrigger) {
+            fuente.volume = 0f;
+            fuente.Play();
+            SubtitleManager.Instance.Show(soSubtitle);
+            if (fadeIn)
+                StartCoroutine(FadeIn());
+            else
+                fuente.volume = volumen;
+            if (endID != "") PlayerProgress.Instance.RegisterInspection(endID);
+        }
     }
 
     
@@ -56,12 +68,4 @@ public class TriggerSonido : MonoBehaviour
         }
         fuente.volume = volumen;
     }
-
-    // Si quieres que se pueda volver a activar al salir (para pasillos repetibles)
-    private void OnTriggerExit(Collider other)
-    {
-        if (!other.CompareTag("Player")) return;
-        if (!reproducirUnaVez) yaSonó = false;
-    }
-    
 }
