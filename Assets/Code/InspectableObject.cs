@@ -145,7 +145,8 @@ public class InspectableObject : MonoBehaviour, IInteractable
         if (!inspecting)
         {
             isInspectionable = false; // Bloquea interacción
-            PlayerProgress.Instance.RegisterInspection(objectID);
+            if (objectID != "InspectableItem")
+                PlayerProgress.Instance.RegisterInspection(objectID);
             StartCoroutine(StartInspection());
         }
     }
