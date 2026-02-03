@@ -13,6 +13,10 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
     private bool isInteractable = false;
     private bool hasInteracted = false; // evita repetir la interacción
     [SerializeField] private PlayerMovement playerMovement; //para el movimiento del jugador
+    [SerializeField] private FootstepsController footstepsController; // 
+
+    [SerializeField] private HeadBobSystem headBobSystem; // 
+
 
     
 
@@ -53,6 +57,16 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
             playerMovement.enabled = false; //bloquea el movimiento del jugador
             Debug.Log($"{name}: Bloquea el movimiento");
         }
+
+         if (footstepsController != null) {
+            footstepsController.enabled = false; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
+
+         if (headBobSystem != null) {
+            headBobSystem.enabled = false; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
         
         //Debug.Log($"{name}: Machine interacted!");
 
@@ -82,6 +96,19 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
             playerMovement.enabled = true; //habilito el movimiento del jugador
             Debug.Log($"{name}: Habilita el movimiento");
         }
+
+         if (footstepsController != null) {
+            footstepsController.enabled = true; //habilito el movimiento del jugador
+            Debug.Log($"{name}: Habilita el movimiento");
+        }
+
+         if (headBobSystem != null) {
+            headBobSystem.enabled = true; //habilito el cabeceo del jugador
+            Debug.Log($"{name}: Habilita el movimiento");
+        }
+        
+        
+
         Debug.Log($"{name}: habilita movement");
         
         if (childTrigger != null)

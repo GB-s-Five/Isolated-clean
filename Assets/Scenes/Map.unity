@@ -175681,7 +175681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1673767140737560523, guid: c8a772db7e3865940a7e56acca767306, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.012
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: 1673767140737560523, guid: c8a772db7e3865940a7e56acca767306, type: 3}
       propertyPath: m_LocalRotation.w
@@ -266499,6 +266499,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 0db11911a0bfeb94da6f009fc446e5b2, type: 2}
+    - target: {fileID: 278630632766054597, guid: 344b8f6a6d9c0684782fa169b1dddb40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02689
+      objectReference: {fileID: 0}
+    - target: {fileID: 278630632766054597, guid: 344b8f6a6d9c0684782fa169b1dddb40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00046
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 344b8f6a6d9c0684782fa169b1dddb40, type: 3}
       propertyPath: m_Name
       value: Pasillo2 (1)
@@ -304603,7 +304611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &919132148946379076
 GameObject:
   m_ObjectHideFlags: 0
@@ -315494,6 +315502,8 @@ MonoBehaviour:
   childTrigger: {fileID: 1031819741}
   xrayImage: {fileID: 2073181901}
   playerMovement: {fileID: 1620272868}
+  footstepsController: {fileID: 1620272875}
+  headBobSystem: {fileID: 2095341076}
 --- !u!1001 &7588730178036359576
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,9 +21,9 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] private PlayerMovement playerMovement; // Movimiento jugador
     [SerializeField] private PlayerLook playerLook; // Movimiento jugador
-    [SerializeField] private FootstepsController footstepsController; // Sonido jugador
+    [SerializeField] private FootstepsController footstepsController; // 
 
-    [SerializeField] private HeadBobSystem headBobSystem; // Sonido jugador
+    [SerializeField] private HeadBobSystem headBobSystem; // 
 
     [SerializeField] private Volume postProcessingVolume;
 
