@@ -48,7 +48,9 @@ public class AfterXRayAudio : MonoBehaviour
         {
             return;
         }
-
+        //Checkpoint
+        Debug.Log("Checkpoint alcanzado");
+        Checkpointmanager.Instance.SaveInstance(PlayerProgress.Instance.inspectedObjects,this.transform.position);
         TriggerSequence(); // Salta la secuencia del trigger 
     }
 

@@ -49584,72 +49584,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362772030}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &363988451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 363988454}
-  - component: {fileID: 363988453}
-  - component: {fileID: 363988452}
-  m_Layer: 0
-  m_Name: muerte
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &363988452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363988451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0361a265f2a17844c9958f162a597cf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!65 &363988453
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363988451}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &363988454
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363988451}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.284, y: 0.0787, z: -3.388}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366874498
 GameObject:
   m_ObjectHideFlags: 0
@@ -50725,10 +50659,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerSonido
   soSubtitle: {fileID: 11400000, guid: bfe7f15249475cf4ab00d5edbc12ed59, type: 2}
-  reproducirUnaVez: 1
   fadeIn: 0
   tiempoFade: 1
   volumen: 1
+  requiredIDs: []
+  endID: cantremember
 --- !u!82 &377958029
 AudioSource:
   m_ObjectHideFlags: 0
@@ -117783,7 +117718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReceptorMesa
   requiredInspectionID: Rayos
-  mesa: {fileID: 3187963274174735554}
+  mesa: {fileID: 2020708602}
   desplazamiento: {x: -0.04, y: 0, z: 0}
   duracion: 0.4
   jumpscareClip: {fileID: 8300000, guid: e7b95d89553e0b8439c79ce877073091, type: 3}
@@ -117818,7 +117753,7 @@ Transform:
   m_GameObject: {fileID: 879181163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.355, y: 0.434, z: -2.617}
+  m_LocalPosition: {x: -4.355, y: 0.434, z: -2.965}
   m_LocalScale: {x: 1, y: 1, z: 1.5310417}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126196,10 +126131,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerSonido
   soSubtitle: {fileID: 11400000, guid: 2f0b90a19f6539c4e8d4248a6d49cf4a, type: 2}
-  reproducirUnaVez: 0
   fadeIn: 0
   tiempoFade: 1
   volumen: 1
+  requiredIDs: []
+  endID: nothing
 --- !u!82 &928453799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -130660,13 +130596,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967274172}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.67961997, z: -0, w: 0.73356444}
-  m_LocalPosition: {x: 10.357, y: 0.229, z: -4.928}
-  m_LocalScale: {x: 0.5, y: 0.1, z: 6.7794347}
+  m_LocalRotation: {x: -0, y: 0.010665255, z: -0, w: 0.9999432}
+  m_LocalPosition: {x: 10.708, y: 0.229, z: -3.128}
+  m_LocalScale: {x: 2.22, y: 0.1, z: 6.5708723}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 443957313}
-  m_LocalEulerAnglesHint: {x: 0, y: 85.628, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.222, z: 0}
 --- !u!82 &967274174
 AudioSource:
   m_ObjectHideFlags: 0
@@ -137897,7 +137833,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.09, y: 0.317, z: 5.132}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.78, y: 1, z: 1.56}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 321386047}
@@ -138015,7 +137951,7 @@ MonoBehaviour:
   idToGive: Rayos
   requiredInspectionID: ViewXray
   waitingRoomTelephone: {fileID: 3955197255687295762}
-  doorToUnlock: {fileID: 0}
+  doorToUnlock: {fileID: 1000049350}
   soSubtitle: {fileID: 11400000, guid: bbc0bf11e051bce4fae79bcd0aa9dd1b, type: 2}
 --- !u!65 &1031819745
 BoxCollider:
@@ -188543,7 +188479,7 @@ Transform:
   m_GameObject: {fileID: 1392990396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.26, y: 0.01999998, z: -1.04}
+  m_LocalPosition: {x: 1.047, y: 0.01999998, z: -0.585}
   m_LocalScale: {x: 1, y: 0.026146, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188562,10 +188498,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerSonido
   soSubtitle: {fileID: 11400000, guid: 47b3f4c9e1a09e242a76b703a90b8606, type: 2}
-  reproducirUnaVez: 1
   fadeIn: 0
   tiempoFade: 1
   volumen: 1
+  requiredIDs: []
+  endID: nothing
 --- !u!82 &1392990399
 AudioSource:
   m_ObjectHideFlags: 0
@@ -203932,10 +203869,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerSonido
   soSubtitle: {fileID: 11400000, guid: 87380e4bf6dc77748a8bda90c96afe48, type: 2}
-  reproducirUnaVez: 1
   fadeIn: 0
   tiempoFade: 1
   volumen: 1
+  requiredIDs: []
+  endID: feelweird
 --- !u!82 &1480321714
 AudioSource:
   m_ObjectHideFlags: 0
@@ -245790,7 +245728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4571705691536292307, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9178133293860290539, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
       propertyPath: m_Name
@@ -281257,10 +281195,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerSonido
   soSubtitle: {fileID: 11400000, guid: acc1d70c83778bb4182d7e57fea82918, type: 2}
-  reproducirUnaVez: 1
   fadeIn: 0
   tiempoFade: 1
   volumen: 1
+  requiredIDs: []
+  endID: whereami
 --- !u!1 &2011094057
 GameObject:
   m_ObjectHideFlags: 0
@@ -318233,7 +318172,6 @@ SceneRoots:
   - {fileID: 1504275000}
   - {fileID: 1413310585}
   - {fileID: 411078145}
-  - {fileID: 363988454}
   - {fileID: 661657346}
   - {fileID: 1895187873}
   - {fileID: 1104301768}
