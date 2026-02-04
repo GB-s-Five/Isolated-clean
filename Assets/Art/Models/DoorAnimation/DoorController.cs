@@ -24,7 +24,7 @@ public class DoorController : MonoBehaviour, IInteractable
     private PlayerState playerState = PlayerState.Out;
 
     [SerializeField] private string[] requiredInspections;
-
+    
     [SerializeField] private AudioClip sonidoAbrir;
     [SerializeField] private AudioClip sonidoCerrar;
     [SerializeField] private float angulo = 90f;
@@ -33,7 +33,7 @@ public class DoorController : MonoBehaviour, IInteractable
     private AudioSource audio;
     private Quaternion closedRotation;
 
-    private bool isLocked = false;  // 🔒 NUEVO
+    private bool isLocked = false;  // 🔒 NUEVO 😈 😖 😭 😩 😳 😴 💔
 
 
     void Start()
