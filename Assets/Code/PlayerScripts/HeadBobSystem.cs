@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,16 +21,18 @@ public class HeadBobSystem : MonoBehaviour
     private float timer; // Timer para controlar el sin y cos
     private float stepDelayTimer; // Float para esperar al primer paso
     private bool canBob; // Variable booleana para saber si puede cabecear
+    private PlayerControls controls;
 
     private void Start()
     {
         startPos = transform.localPosition; // Se guarda la posicion local del transform como posicion inicial
+        controls = new PlayerControls();
     }
 
     private void Update()
     {
         bool isMoving = IsMoving(); 
-        bool isRunning = Keyboard.current.leftAltKey.isPressed; // Se considera que esta corriendo si la tecla alt esta presionada.
+        bool isRunning = controls.Player.Sprint.triggered; // Se considera que esta corriendo si la tecla alt esta presionada.
 
         if (!isMoving) // En caso de que no se esta moviendo
         {

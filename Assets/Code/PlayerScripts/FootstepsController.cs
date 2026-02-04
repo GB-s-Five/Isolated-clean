@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEditor.ShaderGraph;
+using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
 
 public class FootstepsController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class FootstepsController : MonoBehaviour
     [SerializeField] private float runStepInterval = 0.35f;
 
     private float stepTimer = 0f;
+    private PlayerControls controls;
 
     private void Awake()
     {
@@ -24,13 +26,14 @@ public class FootstepsController : MonoBehaviour
             audioSource.playOnAwake = false;
             audioSource.volume = 0.4f; // volumen más bajo
         }
+        controls = new PlayerControls();
     }
 
     private void Update()
     {
         bool isMoving = IsMoving();
-        bool isLeaning = Keyboard.current.qKey.isPressed || Keyboard.current.eKey.isPressed;
-        bool isRunning = Keyboard.current.leftAltKey.isPressed;
+        bool isLeaning = controls.Player.Lean.triggered;
+        bool isRunning = controls.Player.Sprint.triggered;
 
         if (!isMoving && !isLeaning)
         {
