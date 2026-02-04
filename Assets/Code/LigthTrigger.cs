@@ -110,13 +110,35 @@ public class LigthTrigger : MonoBehaviour
         return Mathf.Clamp01(factor);
     }
 
-    private void TurnUpDwonLigths(bool stateLigths) 
+    private void TurnUpDwonLigths(bool stateLigths)
     {
         //Si stateLigths es true, se activa el gameObject, si es false se desactiva
         //Encender luces
         GetComponent<Light>().enabled = stateLigths;
         GetComponent<SphereCollider>().enabled = stateLigths;
 
+        if (GetComponent<FlickeringLight>() != null)
+        {
+            GetComponent<FlickeringLight>().enabled = stateLigths;
+        }
+        else
+        {
+
+            //Obetener el nombre del objeto padre
+            Debug.Log("No tiene FlickeringLight la luz: " + gameObject.name);
+
+        }
+
+        if (GetComponentInChildren<Light>(true) != null)
+        {
+            GetComponentInChildren<Light>(true).enabled = stateLigths;
+        }
+        else
+        {
+            //Obetener el nombre del objeto padre
+            Debug.Log("No tiene Light hijo la luz: " + gameObject.name);
+
+        }
     }
 
 }
