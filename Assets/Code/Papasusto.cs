@@ -10,6 +10,7 @@ public class Papasusto : MonoBehaviour
 
     [SerializeField] public Light[] Luces;
 
+
     public void ToggleLights()
     {
         foreach (Light luz in Luces)
@@ -19,15 +20,22 @@ public class Papasusto : MonoBehaviour
                 luz.enabled = !luz.enabled;
             }
         }
+        Luces[0].GetComponent<FlickeringLight>().enabled = false;
     }
 
+    public void ToggleFlicker()
+    {
+        Luces[0].GetComponent<FlickeringLight>().enabled = !Luces[0].GetComponent<FlickeringLight>().enabled;
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
 
         ToggleLights();
-        Invoke(nameof(Switch), 1.5f);
+        Invoke(nameof(Switch), 1.7f);
         Invoke(nameof(ToggleLights), 2f);
+        Invoke(nameof(ToggleFlicker), 4);
     }
 
     private void Switch()
