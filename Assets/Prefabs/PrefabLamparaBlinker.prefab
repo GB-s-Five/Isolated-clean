@@ -395,6 +395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LigthTrigger
   radius: 1
   maxDamage: 5
+  lightInChild: {fileID: 463166782561768649}
+  flickering: {fileID: 670985228879636565}
   objRenderer: {fileID: 4057447651410178734}
   "puntoDa\xF1o": {fileID: 271255471218604195}
 --- !u!135 &3140557651103252886

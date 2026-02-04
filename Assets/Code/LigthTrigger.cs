@@ -8,6 +8,8 @@ public class LigthTrigger : MonoBehaviour
 
     private SphereCollider spCol;
     private Transform playerInside; // Player actualmente dentro del trigger
+    [SerializeField] private Light lightInChild;
+    [SerializeField] private FlickeringLight flickering;
     [SerializeField] private Renderer objRenderer;
     [SerializeField] private Transform puntoDaño;
 
@@ -34,6 +36,9 @@ public class LigthTrigger : MonoBehaviour
 
         spCol.center = localPos;
         spCol.radius = radius;
+
+        Light lightInChild = GetComponentInChildren<Light>(true);
+        FlickeringLight flickering = GetComponent<FlickeringLight>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -117,9 +122,9 @@ public class LigthTrigger : MonoBehaviour
         GetComponent<Light>().enabled = stateLigths;
         GetComponent<SphereCollider>().enabled = stateLigths;
 
-        if (GetComponent<FlickeringLight>() != null)
+        if (flickering)
         {
-            GetComponent<FlickeringLight>().enabled = stateLigths;
+            flickering.enabled = stateLigths;
 
         }
         else
@@ -130,9 +135,10 @@ public class LigthTrigger : MonoBehaviour
 
         }
 
-        if (GetComponentInChildren<Light>(true) != null)
+        if (lightInChild)
         {
-            GetComponentInChildren<Light>(true).enabled = stateLigths;
+            lightInChild.enabled = stateLigths;
+            Debug.Log("Luz hija " + lightInChild.name + " desactivada en " + gameObject.name);
         }
         else
         {

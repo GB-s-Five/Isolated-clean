@@ -29,7 +29,9 @@ public class FlickeringLight : MonoBehaviour
 
     private void OnDisable()
     {
-        StopCoroutine(FlickerRoutine());
+        StopAllCoroutines();
+        flickerLight.enabled = false;
+        secondaryLight.enabled = false;
     }
 
     IEnumerator FlickerRoutine()
