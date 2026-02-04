@@ -10,6 +10,8 @@ using Scene = UnityEngine.SceneManagement.Scene;
 
 public class ScriptPlayerLive : MonoBehaviour
 {
+    public static ScriptPlayerLive Instance;
+
     public float live = 100f;                // Vida actual
     public float maxLive = 100f;             // Vida m�xima
     public float liveRecoverySec = 2f;       // Cu�nto se recupera por segundo

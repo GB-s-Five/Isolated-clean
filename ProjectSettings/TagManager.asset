@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - LuzDemoniaca
+  - Enemy
+  - Cosoto
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Interactable
-  - 
+  - Walkable
   - 
   - 
   - 
