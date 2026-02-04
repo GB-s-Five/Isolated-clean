@@ -22314,6 +22314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabLamparaBlinker (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9178133293860290539, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -222886,7 +222890,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabLamparaBlinker (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9178133293860290539, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4571705691536292307, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -290153,6 +290162,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2236063255876704671, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
+      propertyPath: flickering
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3794290048933370270, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.946
@@ -290201,7 +290214,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabLamparaBlinker (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 670985228879636565, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
+    - {fileID: 4571705691536292307, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -326935,6 +326950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabLamparaBlinker (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9178133293860290539, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -356957,6 +356976,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8359277503041484591}
   m_Mesh: {fileID: 4148250302271820881, guid: eeab91c4efacc7248b180f74cee82e11, type: 3}
+--- !u!1 &4530959952553305976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4530959952553305977}
+  m_Layer: 0
+  m_Name: Tile__133__6.004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4530959952553305977
 Transform:
   m_ObjectHideFlags: 0
@@ -356964,6 +356999,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070392451}
+  m_GameObject: {fileID: 4530959952553305976}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -363320,6 +363356,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2236063255876704671, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
+      propertyPath: flickering
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3794290048933370270, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.047
@@ -363372,7 +363412,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrefabLamparaBlinker
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9178133293860290539, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 670985228879636565, guid: 54f5123c96e3a21488dce02a107cef5e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

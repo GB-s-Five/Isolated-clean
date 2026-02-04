@@ -8,6 +8,8 @@ public class LigthTrigger : MonoBehaviour
 
     private SphereCollider spCol;
     private Transform playerInside; // Player actualmente dentro del trigger
+    [SerializeField] private Light lightInChild;
+    [SerializeField] private FlickeringLight flickering;
     [SerializeField] private Renderer objRenderer;
     [SerializeField] private Transform puntoDaño;
 
@@ -34,6 +36,9 @@ public class LigthTrigger : MonoBehaviour
 
         spCol.center = localPos;
         spCol.radius = radius;
+
+        Light lightInChild = GetComponentInChildren<Light>(true);
+        FlickeringLight flickering = GetComponent<FlickeringLight>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -110,13 +115,37 @@ public class LigthTrigger : MonoBehaviour
         return Mathf.Clamp01(factor);
     }
 
-    private void TurnUpDwonLigths(bool stateLigths) 
+    private void TurnUpDwonLigths(bool stateLigths)
     {
         //Si stateLigths es true, se activa el gameObject, si es false se desactiva
         //Encender luces
         GetComponent<Light>().enabled = stateLigths;
         GetComponent<SphereCollider>().enabled = stateLigths;
 
+        if (flickering)
+        {
+            flickering.enabled = stateLigths;
+
+        }
+        else
+        {
+
+            //Obetener el nombre del objeto padre
+            Debug.Log("No tiene FlickeringLight la luz: " + gameObject.name);
+
+        }
+
+        if (lightInChild)
+        {
+            lightInChild.enabled = stateLigths;
+            Debug.Log("Luz hija " + lightInChild.name + " desactivada en " + gameObject.name);
+        }
+        else
+        {
+            //Obetener el nombre del objeto padre
+            Debug.Log("No tiene Light hijo la luz: " + gameObject.name);
+
+        }
     }
 
 }
