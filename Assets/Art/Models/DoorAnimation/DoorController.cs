@@ -24,17 +24,16 @@ public class DoorController : MonoBehaviour, IInteractable
     private PlayerState playerState = PlayerState.Out;
 
     [SerializeField] private string[] requiredInspections;
-
+    
     [SerializeField] private AudioClip sonidoAbrir;
     [SerializeField] private AudioClip sonidoCerrar;
     [SerializeField] private float angulo = 90f;
     [SerializeField] private float tiempo = 1.2f;
 
     private AudioSource audio;
-    [SerializeField] private Quaternion closedRotation;
-    [SerializeField] private Quaternion abiertoQuaternion;
+    private Quaternion closedRotation;
 
-    private bool isLocked = false;  // 🔒 NUEVO
+    private bool isLocked = false;  // 🔒 NUEVO 😈 😖 😭 😩 😳 😴 💔
 
 
     void Start()
@@ -60,7 +59,7 @@ public class DoorController : MonoBehaviour, IInteractable
     {
         if (isInverse) playerState = PlayerState.Inverse;
         else playerState = PlayerState.Reverse;
-        Debug.Log("Player inside: " + playerState.ToString());
+        //Debug.Log("Player inside: " + playerState.ToString());
     }
 
     public void SetPlayerOutside()
@@ -88,35 +87,30 @@ public class DoorController : MonoBehaviour, IInteractable
             if (playerState == PlayerState.Inverse)
             {
                 doorState = DoorState.Inverse;
-                lado = -1;
+                lado = 1;
             }
             else if (playerState == PlayerState.Reverse)
             {
                 doorState = DoorState.Reverse;
-                lado = 1;
+                lado = -1;
             }
         }
 
         Quaternion destino = closedRotation * Quaternion.Euler(0, 0, angulo * lado);
-        Debug.Log("Destino = " + destino.eulerAngles + playerState.ToString());
+        //Debug.Log(destino.eulerAngles + playerState.ToString());
 
         StopAllCoroutines();
-        StartCoroutine(Girar(abiertoQuaternion));
+        StartCoroutine(Girar(destino));
     }
 
     System.Collections.IEnumerator Girar(Quaternion final)
     {
         Quaternion inicio = transform.localRotation;
         float t = 0;
-
-        Debug.Log("entrada en rotacion");
-
-
         while (t < tiempo)
         {
             t += Time.deltaTime;
             transform.localRotation = Quaternion.Lerp(inicio, final, t / tiempo);
-            Debug.Log("rotacion");
             yield return null;
         }
         transform.localRotation = final;
@@ -127,19 +121,19 @@ public class DoorController : MonoBehaviour, IInteractable
     {
         if (isLocked)
         {
-            Debug.Log("The door is locked.");
+            //Debug.Log("The door is locked.");
             return;
         }
 
         if (!CanOpenDoor())
         {
-            Debug.Log("The door is locked... you feel you should inspect something first.");
+            //Debug.Log("The door is locked... you feel you should inspect something first.");
             return;
         }
 
         Toggle();
-        
-        Debug.Log(isOpen ? "Door opened" : "Door closed");
+
+        //Debug.Log(isOpen ? "Door opened" : "Door closed");
     }
 
     public bool IsInteractable()
@@ -157,3 +151,4 @@ public class DoorController : MonoBehaviour, IInteractable
         return true;
     }
 }
+
