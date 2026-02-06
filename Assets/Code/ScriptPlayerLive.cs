@@ -16,6 +16,8 @@ public class ScriptPlayerLive : MonoBehaviour
     public float maxLive = 100f;             // Vida m�xima
     public float liveRecoverySec = 2f;       // Cu�nto se recupera por segundo
     public float delayBeforeRegen = 3f;      // Segundos sin da�o antes de regenerar
+    [SerializeField] private string gameOverScene = "GameOver";
+
 
     [Header("Post Processing")]
     public Volume postProcessVolume;
@@ -131,7 +133,13 @@ public class ScriptPlayerLive : MonoBehaviour
             PlayerProgress.Instance.inspectedObjects = Checkpointmanager.Instance.savedIDs;
         } else 
             PlayerProgress.Instance.inspectedObjects.Clear();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        if (Cursor.lockState == CursorLockMode.Locked) //si no esta bloqueado lo bloquea
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        SceneManager.LoadScene(gameOverScene);
     }
 
 

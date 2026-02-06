@@ -57,7 +57,6 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
 
         if (Cursor.lockState != CursorLockMode.Locked) //si no esta bloqueado lo bloquea
-        if (Cursor.lockState != CursorLockMode.Locked)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

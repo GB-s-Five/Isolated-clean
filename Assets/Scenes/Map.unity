@@ -131013,7 +131013,7 @@ MonoBehaviour:
   tiempoFade: 1
   volumen: 1
   requiredIDs: []
-  endID: nothing
+  endID: AmbientSound
 --- !u!82 &928453799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -178085,30 +178085,31 @@ PrefabInstance:
       addedObject: {fileID: 315557169}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
       insertIndex: 27
+      insertIndex: 26
       addedObject: {fileID: 1964762123}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 28
+      insertIndex: 27
       addedObject: {fileID: 132319389}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 29
+      insertIndex: 28
       addedObject: {fileID: 337526207}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 30
+      insertIndex: 29
       addedObject: {fileID: 1456088662}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 31
+      insertIndex: 30
       addedObject: {fileID: 1635502022}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 32
+      insertIndex: 31
       addedObject: {fileID: 1777825895}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 33
+      insertIndex: 32
       addedObject: {fileID: 144755985}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 35
+      insertIndex: 34
       addedObject: {fileID: 1641234017}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
-      insertIndex: 36
+      insertIndex: 35
       addedObject: {fileID: 1497372046}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
       insertIndex: -1
@@ -256154,6 +256155,7 @@ MonoBehaviour:
   maxLive: 100
   liveRecoverySec: 2
   delayBeforeRegen: 3
+  gameOverScene: GameOver
   postProcessVolume: {fileID: 1312320032}
 --- !u!136 &1620272878 stripped
 CapsuleCollider:
