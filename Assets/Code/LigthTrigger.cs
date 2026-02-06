@@ -7,7 +7,7 @@ public class LigthTrigger : MonoBehaviour
     public float maxDamage = 5f;  // Da�o en el epicentro
 
     private SphereCollider spCol;
-    private Transform playerInside; // Player actualmente dentro del trigger
+    public Transform playerInside; // Player actualmente dentro del trigger
     [SerializeField] private Light lightInChild;
     [SerializeField] private FlickeringLight flickering;
     [SerializeField] private Renderer objRenderer;
@@ -41,13 +41,18 @@ public class LigthTrigger : MonoBehaviour
         FlickeringLight flickering = GetComponent<FlickeringLight>();
     }
 
+    public void OnDisable()
+    {
+        playerInside = null;
+        CancelInvoke("DetectAndDamage");
+        StopAllCoroutines();
+    } 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             playerInside = other.transform;
-            InvokeRepeating(nameof(DetectAndDamage), 0f, 0.1f
-                );
+            InvokeRepeating(nameof(DetectAndDamage), 0f, 0.1f );
         }
     }
 
@@ -60,7 +65,7 @@ public class LigthTrigger : MonoBehaviour
         }
     }
 
-    private void DetectAndDamage()
+    public void DetectAndDamage()
     {
         if (playerInside == null) return;
 

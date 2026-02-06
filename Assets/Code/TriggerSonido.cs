@@ -44,18 +44,21 @@ public class TriggerSonido : MonoBehaviour
                 break;
             }
         if (canTrigger) {
-            fuente.volume = 0f;
-            fuente.Play();
-            SubtitleManager.Instance.Show(soSubtitle);
-            if (fadeIn)
-                StartCoroutine(FadeIn());
-            else
-                fuente.volume = volumen;
-            if (endID != "") PlayerProgress.Instance.RegisterInspection(endID);
+            PlaySound();
         }
     }
 
-    
+    public void PlaySound()
+    {
+        fuente.volume = 0f;
+        fuente.Play();
+        SubtitleManager.Instance.Show(soSubtitle);
+        if (fadeIn)
+            StartCoroutine(FadeIn());
+        else
+            fuente.volume = volumen;
+        if (endID != "") PlayerProgress.Instance.RegisterInspection(endID);
+    }
     
     System.Collections.IEnumerator FadeIn()
     {

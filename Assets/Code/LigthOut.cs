@@ -12,9 +12,8 @@ public class LightOut : MonoBehaviour
     {
         if (other.CompareTag("Player") && door.isOpen)
         {
-            //Debug.Log("Comparacion correcta condiciones para apagar la luz correctas");
             Invoke(nameof(DisableObject), 3f);
-        } //else Debug.Log("No se cumplen condiciones");
+        }
     }
 
     void DisableObject()
@@ -31,10 +30,8 @@ public class LightOut : MonoBehaviour
             if (lightComponent != null)
             {
                 lightComponent.enabled = false;
+                child.GetComponent<LigthTrigger>().enabled = false;
             }
         }
-
-
-        //Debug.Log("LUZ APAGADA");
     }
 }
