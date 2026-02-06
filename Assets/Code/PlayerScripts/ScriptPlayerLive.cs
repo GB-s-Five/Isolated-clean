@@ -19,6 +19,15 @@ public class ScriptPlayerLive : MonoBehaviour
     [SerializeField] private string gameOverScene = "GameOver";
     public event Action OnPlayerDeath;
      public event Action OnPlayerDamaged;
+    [SerializeField] private AudioSource heartbeatSource;
+    [SerializeField] private float minVolume = 0.05f;
+    [SerializeField] private float maxVolume = 1.5f;
+    [SerializeField] private float minPitch = 1f;
+    [SerializeField] private float maxPitch = 5f;
+    [SerializeField] private float volumeStartLife = 99f;
+    [SerializeField] private float volumeFullLife = 10f;
+    [SerializeField] private float pitchMaxLife = 1f;
+
 
 
     [Header("Post Processing")]
@@ -84,12 +93,32 @@ public class ScriptPlayerLive : MonoBehaviour
             postProcessVolume.profile.TryGet(out chromaticAberration);
             postProcessVolume.weight = 1f;
         }
-
-        
+        UpdateHeartbeat();
     }
 
+    private void UpdateHeartbeat()
+    {
+        if (live >= maxLive)
+        {
+            if (heartbeatSource.isPlaying)
+                heartbeatSource.Stop();
+            return;
+        }
+        if (!heartbeatSource.isPlaying)
+            heartbeatSource.Play();
+        // volume
+        float volumeT = Mathf.InverseLerp(volumeStartLife, volumeFullLife, live);
+        float volume = Mathf.Lerp(minVolume, maxVolume, volumeT);
+        // velocity
+        float pitchT = Mathf.InverseLerp(maxLive, pitchMaxLife, live);
+        float pitch = Mathf.Lerp(minPitch, maxPitch, pitchT);
+        heartbeatSource.volume = volume;
+        heartbeatSource.pitch = pitch;
+    }
+
+    
     // -----------------------------
-    //     REGENERACI�N DE VIDA
+    //     REGENERACIóN DE VIDA
     // -----------------------------
     private void RegenerateLife()
     {
@@ -102,7 +131,7 @@ public class ScriptPlayerLive : MonoBehaviour
             CancelInvoke(nameof(UpdateEffect));
             UpdateEffect(); // Actualiza efectos para vida completa
         }
-
+        UpdateHeartbeat();
         Debug.Log("Regenerando vida: " + live);
     }
 
