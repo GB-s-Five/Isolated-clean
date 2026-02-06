@@ -7,17 +7,17 @@ OcclusionCullingSettings:
   m_OcclusionBakeSettings:
     smallestOccluder: 1
     smallestHole: 0.25
-    backfaceThreshold: 100
+    backfaceThreshold: 90
   m_SceneGUID: 99c9720ab356a0642a771bea13969a05
   m_OcclusionCullingData: {fileID: 36300000, guid: 44c2d6517499ef340976530aac761db2, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.13705933, g: 0.1373093, b: 0.13836467, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.185
+  m_FogDensity: 0.08
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -111383,6 +111383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PenguinToy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c30f60059f1c82e45911f46a7a2e284c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -137017,6 +137021,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2001630509}
+  - {fileID: 6917834065073612263}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978063356
@@ -161016,7 +161021,7 @@ Transform:
   m_GameObject: {fileID: 1153020011}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.23, y: 4.07, z: 13.87}
+  m_LocalPosition: {x: 4.23, y: 3.498, z: 13.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -255188,6 +255193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EstructuraMapitaBuenaParedesfbx
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: abde3c959198457408db2e597341b6b7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1322758792899473583, guid: abde3c959198457408db2e597341b6b7, type: 3}
       propertyPath: m_LocalScale.y
       value: 102.75
@@ -306919,7 +306928,10 @@ Transform:
   m_EditorClassIdentifier: Assembly-CSharp::XRMachineInteractable
   machineAudio: {fileID: 0}
   childTrigger: {fileID: 1031819741}
+  xrayImage: {fileID: 0}
   playerMovement: {fileID: 1620272868}
+  footstepsController: {fileID: 0}
+  headBobSystem: {fileID: 0}
 --- !u!65 &1808688518
 BoxCollider:
   m_GameObject: {fileID: 1809249448}
@@ -364781,8 +364793,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3975136596754277573, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: field of view
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975136596754277573, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_FocalLength
+      value: 20.78461
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975136596754277573, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: far clip plane
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975136596754277573, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalPosition.x
