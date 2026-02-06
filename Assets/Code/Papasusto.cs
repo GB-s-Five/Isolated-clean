@@ -7,7 +7,8 @@ public class Papasusto : MonoBehaviour
 
     
     [SerializeField] private GameObject tPosePrefab;
-
+    public AudioSource audio;
+    public AudioSource audio2;
     [SerializeField] public Light[] Luces;
 
 
@@ -36,8 +37,15 @@ public class Papasusto : MonoBehaviour
         Invoke(nameof(Switch), 1.7f);
         Invoke(nameof(ToggleLights), 2f);
         Invoke(nameof(ToggleFlicker), 4);
+        Invoke(nameof(PlayAudio2), 2f);
+        audio.Play();
     }
 
+    private void PlayAudio2()
+    {
+
+        audio2.Play();
+    }
     private void Switch()
     {
         if (father != null)

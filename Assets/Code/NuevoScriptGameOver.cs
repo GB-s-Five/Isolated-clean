@@ -1,24 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Botones : MonoBehaviour
+public class NuevoSciptGameOver : MonoBehaviour
 {
     [SerializeField] private string nextSceneName = "Map";
     [SerializeField] private string creditos = "Creditos";
-    public AudioSource cajita;
-    public AudioSource loop;
+    public AudioSource Malro;
+    
 
     public void Awake()
     {
-        cajita.Play();
-        Invoke(nameof(Playloop), 1f);
+        Malro.Play();
+        
     }
-
-    private void Playloop()
-    {
-        loop.Play();
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene(nextSceneName);
@@ -30,10 +24,10 @@ public class Botones : MonoBehaviour
     }
     public void QuitGame()
     {
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
-                Application.Quit();
-        #endif
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
