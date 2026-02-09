@@ -5743,22 +5743,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41243940}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &42169585
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4530959952553305978}
-  m_Layer: 0
-  m_Name: Tile__133__6004
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &42351327
 GameObject:
   m_ObjectHideFlags: 0
@@ -61430,7 +61414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Perseguidor
   velocity: 4
-  player: {fileID: 1620272869}
+  player: {fileID: 0}
   distanceToCatch: 1.2
   parameterSpeed: Speed
   speedSprint: 0.8
@@ -149578,22 +149562,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186658177}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &1070392451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4530959952553305977}
-  m_Layer: 0
-  m_Name: Tile__133__6004
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1070769691
 GameObject:
   m_ObjectHideFlags: 0
@@ -383076,10 +383044,6 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1024366685966409022}
-  - {fileID: 4530959952553305978}
-  - {fileID: 4530959952553305977}
-  - {fileID: 1087985970}
   - {fileID: 606192096}
   - {fileID: 531883208}
   - {fileID: 800895853}
