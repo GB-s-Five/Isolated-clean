@@ -12,13 +12,13 @@ public class ScriptPlayerLive : MonoBehaviour
 {
     public static ScriptPlayerLive Instance;
 
-    public float live = 100f;                // Vida actual
+    private float live;                // Vida actual
     public float maxLive = 100f;             // Vida m�xima
     public float liveRecoverySec = 2f;       // Cu�nto se recupera por segundo
     public float delayBeforeRegen = 3f;      // Segundos sin da�o antes de regenerar
     [SerializeField] private string gameOverScene = "GameOver";
     public event Action OnPlayerDeath;
-     public event Action OnPlayerDamaged;
+    public event Action OnPlayerDamaged;
     [SerializeField] private AudioSource heartbeatSource;
     [SerializeField] private float minVolume = 0.05f;
     [SerializeField] private float maxVolume = 1.5f;
@@ -46,6 +46,7 @@ public class ScriptPlayerLive : MonoBehaviour
 
     public void Awake() //asignar una posicion al jugador
     {
+        live = maxLive;
         if (Checkpointmanager.Instance.playerPosition != new Vector3())
         {
             rb = GetComponent<Rigidbody>();
