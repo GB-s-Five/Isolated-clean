@@ -10,6 +10,9 @@ public class ZonaSegura : MonoBehaviour
     [Header("=== REFERENCIA ===")]
     public TriggerAudioThenAlarma scriptPrincipal;  // Arrastra el objeto PADRE
 
+    [Header("=== PERSECUCIÓN ===")]
+    public Perseguidor chaser; // I. se referencia al perseguidor
+
     private AudioSource fuenteJumpscare;
     private bool yaSonóJumpscare = false;
 
@@ -41,5 +44,12 @@ public class ZonaSegura : MonoBehaviour
         // 2. LLAMAR AL SCRIPT PRINCIPAL PARA APAGAR TODO
         if (scriptPrincipal != null)
             scriptPrincipal.JugadorEntroZonaSegura();
+        
+        // 3. ACTIVAR PERSECUCIÓN (I.)
+        if (chaser != null)
+            chaser.ActiveChase();
+
+
+            
     }
 }
