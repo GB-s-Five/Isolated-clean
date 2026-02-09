@@ -28,6 +28,9 @@ public class TriggerAudioThenAlarma : MonoBehaviour
     [Header("=== SPHERES OJOS DEMONÍACOS ===")]
     public GameObject[] spheresOjos;
 
+    [Header("=== MODELO A ACTIVAR CON LAS LUCES ===")]
+    [SerializeField] private GameObject modeloAlarma; //I. Coloco el modelo del padre al lado de las luces rojas
+
     [Header("=== ZONA SEGURA (COLLIDER A DESACTIVAR) ===")]
     public Collider zonaSeguraCollider;  // Arrastra AQUÍ el BoxCollider del GameObject vacío
 
@@ -129,6 +132,9 @@ public class TriggerAudioThenAlarma : MonoBehaviour
 
         foreach (GameObject ojo in spheresOjos)
             if (ojo) ojo.SetActive(true);  
+        
+        if (modeloAlarma)
+        modeloAlarma.SetActive(true);
     }
 
     void ApagarTodo()
