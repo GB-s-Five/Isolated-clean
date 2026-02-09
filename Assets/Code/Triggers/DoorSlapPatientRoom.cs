@@ -8,61 +8,74 @@ public class DoorSlapPatientRoom : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioSource doorSlapAudio;
-    
+
     [Header("Puerta")]
     [SerializeField] private Transform puerta; // La puerta que se cierra
-    [SerializeField] private float velocidadCierre = 0.5f; // Tiempo de cierre (rápido para portazo)
+    [SerializeField] private float velocidadCierre = 0.5f; // Tiempo de cierre (portazo)
+    [SerializeField] private Vector3 rotacionCerradaEuler; // ROTACIÓN CERRADA
 
     private bool hasTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (hasTriggered) return;
-        if (other.CompareTag("Player"))
-        {
-            if (PlayerProgress.Instance.HasInspected(requiredInspectionID))
-            {
-                if (doorSlapAudio != null)
-                {
-                    doorSlapAudio.Play();
-                    Debug.Log("¡Portazo reproducido!");
-                }
-                else
-                {
-                    Debug.LogWarning("No se asignó AudioSource para el portazo.");
-                }
+        if (!other.CompareTag("Player")) return;
 
-                if (puerta != null)
-                {
-                    StartCoroutine(CerrarPuerta());
-                }
-                else
-                {
-                    Debug.LogWarning("No se asignó la puerta en el campo 'Puerta'.");
-                }
-                
-                hasTriggered = true;
-                //Checkpoint
-                Debug.Log("Checkpoint alcanzado");
-                Checkpointmanager.Instance.SaveInstance(PlayerProgress.Instance.inspectedObjects,this.transform.position);
-            }
+        if (!PlayerProgress.Instance.HasInspected(requiredInspectionID))
+            return;
+
+        // Sonido del portazo
+        if (doorSlapAudio != null)
+        {
+            doorSlapAudio.Play();
+            Debug.Log("¡Portazo reproducido!");
+        }
+        else
+        {
+            Debug.LogWarning("No se asignó AudioSource para el portazo.");
+        }
+
+        // Cierre de la puerta
+        if (puerta != null)
+        {
+            StartCoroutine(CerrarPuerta());
+        }
+        else
+        {
+            Debug.LogWarning("No se asignó la puerta en el campo 'Puerta'.");
+        }
+
+        hasTriggered = true;
+
+        // Checkpoint
+        if (Checkpointmanager.Instance != null)
+        {
+            Debug.Log("Checkpoint alcanzado");
+            Checkpointmanager.Instance.SaveInstance(
+                PlayerProgress.Instance.inspectedObjects,
+                transform.position
+            );
         }
     }
 
     private System.Collections.IEnumerator CerrarPuerta()
     {
         Quaternion rotacionInicial = puerta.localRotation;
-        Quaternion rotacionCerrada = Quaternion.identity; // Posición cerrada (0°)
+        Quaternion rotacionCerrada = Quaternion.Euler(rotacionCerradaEuler);
         float tiempo = 0f;
 
         while (tiempo < velocidadCierre)
         {
             tiempo += Time.deltaTime;
-            puerta.localRotation = Quaternion.Lerp(rotacionInicial, rotacionCerrada, tiempo / velocidadCierre);
+            puerta.localRotation = Quaternion.Lerp(
+                rotacionInicial,
+                rotacionCerrada,
+                tiempo / velocidadCierre
+            );
             yield return null;
         }
 
-        puerta.localRotation = rotacionCerrada; // Asegura posición final
+        puerta.localRotation = rotacionCerrada;
         Debug.Log("Puerta cerrada con portazo!");
     }
 }

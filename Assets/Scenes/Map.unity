@@ -30985,6 +30985,7 @@ MonoBehaviour:
   doorSlapAudio: {fileID: 231796906}
   puerta: {fileID: 0}
   velocidadCierre: 0.1
+  rotacionCerradaEuler: {x: 0, y: 0, z: 0}
 --- !u!1 &231885510
 GameObject:
   m_ObjectHideFlags: 0
@@ -92281,6 +92282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Checkpointmanager
   playerPosition: {x: 0, y: 0, z: 0}
+  hasCheckpoint: 0
 --- !u!1 &661834287
 GameObject:
   m_ObjectHideFlags: 0
@@ -136023,7 +136025,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.8617954
+  MinDistance: 2.14
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -136059,7 +136061,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -136115,6 +136117,7 @@ MonoBehaviour:
   doorSlapAudio: {fileID: 967274174}
   puerta: {fileID: 1196358142}
   velocidadCierre: 0.15
+  rotacionCerradaEuler: {x: 0, y: 0, z: 25.362}
 --- !u!65 &967274176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -209402,7 +209405,7 @@ GameObject:
   - component: {fileID: 1463993776}
   - component: {fileID: 1463993775}
   m_Layer: 0
-  m_Name: Maletin.
+  m_Name: Maletin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255837,46 +255840,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728aa459a279f6643b0102ca19d621df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FootstepsController
-  footstepClips:
-  - {fileID: 8300000, guid: 965a0950d940b694e94b78d4381c0247, type: 3}
-  - {fileID: 8300000, guid: 6304594f2d7f16c4b93d054a2ab28fce, type: 3}
-  - {fileID: 8300000, guid: 864bc0ae87cdd1240bb09e61149a7f34, type: 3}
-  - {fileID: 8300000, guid: bb92e6244814e80429468a89157819e2, type: 3}
-  audioSource: {fileID: 0}
-  walkStepInterval: 0.55
-  runStepInterval: 0.35
---- !u!114 &1620272876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552645170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe64f5d929d5554ab9941c69af9597d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScriptPlayerLive
-  live: 100
-  maxLive: 100
-  liveRecoverySec: 2
-  delayBeforeRegen: 3
-  gameOverScene: GameOver
-  heartbeatSource: {fileID: 1620272880}
-  minVolume: 0.05
-  maxVolume: 1.5
-  minPitch: 1
-  maxPitch: 5
-  volumeStartLife: 99
-  volumeFullLife: 10
-  pitchMaxLife: 1
-  postProcessVolume: {fileID: 1312320032}
-  eyeBlinkEffect: {fileID: 2137761748}
 --- !u!136 &1620272878 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 9002401171663573261, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
   m_PrefabInstance: {fileID: 2142630245305699237}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620272884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3667390028251748462, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+  m_PrefabInstance: {fileID: 2142630245305699237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe64f5d929d5554ab9941c69af9597d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptPlayerLive
 --- !u!1 &1621673634
 GameObject:
   m_ObjectHideFlags: 0
@@ -356903,7 +356882,7 @@ MonoBehaviour:
   pauseBetween: 0.05
   finalCloseOffset: 0
   eyesAnimator: {fileID: 2137761753}
-  scriptPlayerLive: {fileID: 1620272876}
+  scriptPlayerLive: {fileID: 1620272884}
   gameOverScene: GameOver
 --- !u!114 &2137761749
 MonoBehaviour:
@@ -364683,6 +364662,10 @@ PrefabInstance:
       propertyPath: interactionText
       value: 
       objectReference: {fileID: 1412751164}
+    - target: {fileID: 3667390028251748462, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: eyeBlinkEffect
+      value: 
+      objectReference: {fileID: 2137761748}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.64307
@@ -364723,9 +364706,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5128895748571698550, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5769771316053857064, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769771316053857064, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822176671192589544, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -366945,7 +366940,7 @@ GameObject:
   - component: {fileID: 329870862521714178}
   - component: {fileID: 3721186816784774633}
   m_Layer: 0
-  m_Name: B_1_1_1_PVC_Window_Frame.
+  m_Name: PVCWindowFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369889,7 +369884,7 @@ GameObject:
   - component: {fileID: 4091029634320874252}
   - component: {fileID: 1579554354137920589}
   m_Layer: 0
-  m_Name: B_1_4_1_Exterior_Glass
+  m_Name: Exterior_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

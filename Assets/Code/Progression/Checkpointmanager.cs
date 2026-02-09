@@ -1,13 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public class Checkpointmanager : MonoBehaviour
+
 {
     public static Checkpointmanager Instance;
 
-    public HashSet<string> savedIDs = new HashSet<string>(); //zero tags
-    public Vector3 playerPosition = new Vector3(); //starting pos
-    
+    public HashSet<string> savedIDs = new HashSet<string>();
+    public Vector3 playerPosition;
+    public bool hasCheckpoint = false;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -18,17 +21,15 @@ public class Checkpointmanager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        Debug.LogWarning(playerPosition);
     }
-
 
     public void SaveInstance(HashSet<string> iDs, Vector3 position)
     {
         savedIDs.Clear();
         foreach (string id in iDs)
-        {
             savedIDs.Add(id);
-        }
+
         playerPosition = position;
+        hasCheckpoint = true;
     }
 }
