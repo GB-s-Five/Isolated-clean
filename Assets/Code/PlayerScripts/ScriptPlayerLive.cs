@@ -57,7 +57,7 @@ public class ScriptPlayerLive : MonoBehaviour
     
 
     // -----------------------------
-    //     RECIBIR DA�O
+    //     RECIBIR DAÑO
     // -----------------------------
     public void TakeDamage(float damage)
     {

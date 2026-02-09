@@ -5743,6 +5743,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41243940}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &42169585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4530959952553305978}
+  m_Layer: 0
+  m_Name: Tile__133__6004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &42351327
 GameObject:
   m_ObjectHideFlags: 0
@@ -51515,72 +51531,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362772030}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &363988451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 363988454}
-  - component: {fileID: 363988453}
-  - component: {fileID: 363988452}
-  m_Layer: 0
-  m_Name: muerte
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &363988452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363988451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0361a265f2a17844c9958f162a597cf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!65 &363988453
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363988451}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &363988454
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363988451}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.284, y: 0.0787, z: -3.388}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364162445 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1024339715744178770, guid: 7a3467e5c9c58b94a8d2fa3cac3cc4bf, type: 3}
@@ -149641,6 +149591,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1186658177}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1070392451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4530959952553305977}
+  m_Layer: 0
+  m_Name: Tile__133__6004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1070769691
 GameObject:
   m_ObjectHideFlags: 0
@@ -364996,6 +364962,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3800002877583459611, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: playerRb
+      value: 
+      objectReference: {fileID: 1620272879}
+    - target: {fileID: 3800002877583459611, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: walkAmount
       value: 0.04
       objectReference: {fileID: 0}
@@ -365006,6 +364976,10 @@ PrefabInstance:
     - target: {fileID: 3975136596754277573, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: far clip plane
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975136596754277573, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -383488,7 +383462,6 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1809249454}
   - {fileID: 1024366685966409022}
   - {fileID: 4530959952553305978}
   - {fileID: 4530959952553305977}
@@ -383569,7 +383542,6 @@ SceneRoots:
   - {fileID: 1593143492}
   - {fileID: 785553586}
   - {fileID: 1406907999}
-  - {fileID: 363988454}
   - {fileID: 1266020988}
   - {fileID: 550149306}
   - {fileID: 543946781}
