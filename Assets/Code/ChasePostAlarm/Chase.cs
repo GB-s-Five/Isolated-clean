@@ -10,7 +10,7 @@ public class Perseguidor : MonoBehaviour
     [Header("=== ANIMATOR ===")]
     public string parameterSpeed = "Speed";
     public float speedSprint = 0.8f; // > 0.7
-    
+
     public Animator animator;
 
     private bool chase = false;
@@ -18,6 +18,13 @@ public class Perseguidor : MonoBehaviour
     private void Update()
     {
         if (!chase || player == null) return;
+        
+        // Mantener la altura actual del perseguidor
+        Vector3 targetPosition = new Vector3(
+            player.position.x,
+            transform.position.y, // altura constante
+            player.position.z
+        );
 
         Vector3 direction = (player.position - transform.position).normalized;
         transform.position += direction * velocity * Time.deltaTime;
