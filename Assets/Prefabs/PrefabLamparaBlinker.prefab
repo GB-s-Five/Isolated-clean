@@ -263,7 +263,6 @@ GameObject:
   - component: {fileID: 2236063255876704671}
   - component: {fileID: 3140557651103252886}
   - component: {fileID: 670985228879636565}
-  - component: {fileID: 4571705691536292307}
   m_Layer: 2
   m_Name: LigthPointerScrpts
   m_TagString: Untagged
@@ -395,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LigthTrigger
   radius: 1
   maxDamage: 5
+  playerInside: {fileID: 0}
   lightInChild: {fileID: 463166782561768649}
   flickering: {fileID: 670985228879636565}
   objRenderer: {fileID: 4057447651410178734}
@@ -441,19 +441,6 @@ MonoBehaviour:
   minIntensity: 0.2
   maxIntensity: 1.5
   glitchChance: 0.15
---- !u!114 &4571705691536292307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5582605112054451263}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8865e1caf2c7a2c4b8b898b2145e3913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LightOut
-  door: {fileID: 0}
 --- !u!1 &9178133293860290539
 GameObject:
   m_ObjectHideFlags: 0
