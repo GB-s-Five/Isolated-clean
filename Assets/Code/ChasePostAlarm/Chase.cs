@@ -1,67 +1,66 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Perseguidor : MonoBehaviour
 {
     [Header("=== PERSECUCIÓN ===")]
-    public float velocity = 4f;
+    public float velocity = 0.8f;
     public Transform player;
-    public float distanceToCatch = 1.2f;
+
+    [Header("=== NAVMESH ===")]
+    public NavMeshAgent agent;
 
     [Header("=== ANIMATOR ===")]
     public string parameterSpeed = "Speed";
-    public float speedSprint = 0.8f; // > 0.7
-
     public Animator animator;
 
     private bool chase = false;
 
-    private void Update()
+    void Update()
     {
-        if (!chase || player == null) return;
-        
-        // Mantener la altura actual del perseguidor
-        Vector3 targetPosition = new Vector3(
-            player.position.x,
-            transform.position.y, // altura constante
-            player.position.z
-        );
+        if (!chase || !player || !agent) return;
 
-        Vector3 direction = (player.position - transform.position).normalized;
-        transform.position += direction * velocity * Time.deltaTime;
+        agent.SetDestination(player.position);
 
-        // que mire al jugador
-        transform.LookAt(player);
+        if (animator)
+        {
+            float speedPercent = agent.velocity.magnitude / agent.speed;
+            animator.SetFloat(parameterSpeed, speedPercent);
+        }
 
-         // COMPROBAR SI ALCANZA AL JUGADOR
-        float distance = Vector3.Distance(transform.position, player.position);
-        if (distance <= distanceToCatch)
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             CatchPlayer();
         }
     }
+
     void CatchPlayer()
     {
         chase = false;
 
         Debug.Log("JUGADOR ALCANZADO");
 
-        // Parar animación
-        if (animator != null)
+        agent.isStopped = true;
+
+        if (animator)
             animator.SetFloat(parameterSpeed, 0f);
 
-        // DESAPARECER PADRE
-        if (transform.parent != null)
-            transform.parent.gameObject.SetActive(false);
-        else
-            gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     // LLAMADO DESDE ZONASEGURA
     public void ActiveChase()
     {
+
+        if (!agent)
+            agent = GetComponent<NavMeshAgent>();
+
+        agent.speed = velocity;
+        agent.enabled = true;
         chase = true;
-        if (animator != null)
-            animator.SetFloat(parameterSpeed, speedSprint);
+        agent.isStopped = false;
+        
+
         Debug.Log("EL MODELO COMIENZA A PERSEGUIR");
     }
 }
