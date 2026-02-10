@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1899bc2a2025ca42a67aaac0917aadf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LigthTrigger
-  radius: 1
+  radius: 2
   maxDamage: 5
   playerInside: {fileID: 0}
   lightInChild: {fileID: 463166782561768649}
