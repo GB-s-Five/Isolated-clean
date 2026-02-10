@@ -52,7 +52,7 @@ public class TriggerAudioThenAlarma : MonoBehaviour
     {
         fuente = GetComponent<AudioSource>();
         fuente.playOnAwake = false;
-        fuente.spatialBlend = 0f;  // ALARMA 100% 2D
+        
         ApagarTodo();
 
         // ZONA SEGURA OCULTA AL INICIO (solo desactivamos el collider)
@@ -62,6 +62,7 @@ public class TriggerAudioThenAlarma : MonoBehaviour
 
     public void ActivateAlarm()
     {
+        fuente.spatialBlend = 0f;
         if (yaActivadoGlobal) return;
 
         yaActivadoGlobal = true;
