@@ -29,6 +29,7 @@ public class CandleTurnOffLights : MonoBehaviour
 
 
     void Update()
+    void Update()      
     {
         // Tecla 0 (fila superior del teclado)
         if (Input.GetKeyDown(KeyCode.Alpha0) && !yaEjecutado)
@@ -79,6 +80,7 @@ public class CandleTurnOffLights : MonoBehaviour
 
     private IEnumerator PointLightsRandomizeOff()       //POINTS LIGHTS
     {
+    {  
         List<Light> lights = new List<Light>(pointLights);
 
         for (int i = 0; i < lights.Count; i++)
@@ -101,6 +103,7 @@ public class CandleTurnOffLights : MonoBehaviour
 
                 if (!reproduceSound && soundController && soundOffLight)    //----------
                 {
+                {   
                     soundController.PlayOneShot(soundOffCandles);   //------------------
                     reproduceSound = true;                          //------------------
                 }           //sonido apagar velas fin-----------------------------------

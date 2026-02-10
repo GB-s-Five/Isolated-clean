@@ -1593,6 +1593,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.012
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &10792645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,6 +2447,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &17714223
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,6 +3790,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &31302139
 GameObject:
   m_ObjectHideFlags: 0
@@ -10923,6 +10947,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.02
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &76871181
 GameObject:
   m_ObjectHideFlags: 0
@@ -21244,6 +21276,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &159670549
 GameObject:
   m_ObjectHideFlags: 0
@@ -23296,6 +23336,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1001 &174359068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31937,6 +31985,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &237746403
 GameObject:
   m_ObjectHideFlags: 0
@@ -35536,6 +35592,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &260239949
 GameObject:
   m_ObjectHideFlags: 0
@@ -42001,7 +42065,7 @@ Transform:
   m_GameObject: {fileID: 305279842}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.00423, y: 0.03736, z: 0.00792}
+  m_LocalPosition: {x: 0.00423, y: 0.03736, z: 0.0087}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49457,6 +49521,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350476076}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &352362731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.256
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.618
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.573429
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
+      propertyPath: m_Name
+      value: Candles (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
 --- !u!1 &352879712
 GameObject:
   m_ObjectHideFlags: 0
@@ -56609,6 +56730,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.04
   bucleTime: 0.09
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &403674417
 GameObject:
   m_ObjectHideFlags: 0
@@ -73308,6 +73437,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.04
   bucleTime: 0.12
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1001 &526191754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86661,6 +86798,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.008
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &609418694
 GameObject:
   m_ObjectHideFlags: 0
@@ -87809,6 +87954,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &615553733
 GameObject:
   m_ObjectHideFlags: 0
@@ -99987,6 +100140,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.016
   bucleTime: 0.12
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &701507925
 GameObject:
   m_ObjectHideFlags: 0
@@ -118843,6 +119004,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.04
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &837409811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9201754321071567607, guid: c42610dada364374a84cc553fe875c7f, type: 3}
@@ -119103,6 +119272,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.017
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &839144032
 GameObject:
   m_ObjectHideFlags: 0
@@ -121577,6 +121754,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &857453601
 GameObject:
   m_ObjectHideFlags: 0
@@ -122628,6 +122813,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.015
   bucleTime: 0.09
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &863823672
 GameObject:
   m_ObjectHideFlags: 0
@@ -127528,6 +127721,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &894139777
 GameObject:
   m_ObjectHideFlags: 0
@@ -135335,6 +135536,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.02
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &950561292
 GameObject:
   m_ObjectHideFlags: 0
@@ -135869,6 +136078,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.009
   bucleTime: 0.08
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &956208185
 GameObject:
   m_ObjectHideFlags: 0
@@ -164614,8 +164831,9 @@ GameObject:
   - component: {fileID: 1160832574}
   - component: {fileID: 1160832576}
   - component: {fileID: 1160832575}
+  - component: {fileID: 1160832577}
   m_Layer: 0
-  m_Name: Spot Light (1)
+  m_Name: 2Spot Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164730,6 +164948,23 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1160832577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160832573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1162013805
 GameObject:
   m_ObjectHideFlags: 0
@@ -167690,6 +167925,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.001
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1176520699
 GameObject:
   m_ObjectHideFlags: 0
@@ -174534,6 +174777,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.007
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1226434067
 GameObject:
   m_ObjectHideFlags: 0
@@ -178179,6 +178430,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1251916030
 GameObject:
   m_ObjectHideFlags: 0
@@ -179187,6 +179446,199 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1147341052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1262829443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262829444}
+  - component: {fileID: 1262829445}
+  - component: {fileID: 1262829446}
+  m_Layer: 0
+  m_Name: CandleLightManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262829444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262829443}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.45, y: 0.988, z: -6.235}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 499300532}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1262829445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262829443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 1262829446}
+  soundOffLight: {fileID: 8300000, guid: 434172cc7ff6b1a4aa53ffca216dd314, type: 3}
+  soundOffCandles: {fileID: 8300000, guid: 1c88e8785dcd5df45b1a3e571bf6efdd, type: 3}
+  spotLights:
+  - {fileID: 2003612905}
+  - {fileID: 1160832576}
+  pointLights:
+  - {fileID: 1251915415}
+  - {fileID: 76669610}
+  - {fileID: 1521363609}
+  - {fileID: 863606632}
+  - {fileID: 401907820}
+  - {fileID: 1273612651}
+  - {fileID: 615028002}
+  - {fileID: 835441329}
+  - {fileID: 1323676145}
+  - {fileID: 2089374037}
+  - {fileID: 893601351}
+  - {fileID: 17516327}
+  - {fileID: 1264880212}
+  - {fileID: 260003797}
+  - {fileID: 1876135422}
+  - {fileID: 159118055}
+  - {fileID: 173662155}
+  - {fileID: 2127377011}
+  - {fileID: 2127377011}
+  - {fileID: 1835987182}
+  - {fileID: 1064512836}
+  - {fileID: 526182485}
+  - {fileID: 1403535983}
+  - {fileID: 1403535983}
+  - {fileID: 1531947725}
+  - {fileID: 839044676}
+  - {fileID: 1176312173}
+  - {fileID: 10251863}
+  - {fileID: 954854045}
+  - {fileID: 1840199473}
+  - {fileID: 1225908228}
+  - {fileID: 1503005351}
+  - {fileID: 31051011}
+  - {fileID: 235506799}
+  - {fileID: 2091448667}
+  - {fileID: 1842114312}
+  - {fileID: 608850787}
+  - {fileID: 857150292}
+  - {fileID: 1454327767}
+  - {fileID: 1674051246}
+  - {fileID: 699937077}
+  - {fileID: 637848150}
+  - {fileID: 948150261}
+  - {fileID: 2105048895}
+--- !u!82 &1262829446
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262829443}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.66709423
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1263902025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179504,6 +179956,15 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.02
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights:
+  - {fileID: 0}
+  pointLights: []
 --- !u!1001 &1266020988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179594,6 +180055,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1392990397}
+      addedObject: {fileID: 1262829444}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9a6f25e8519c024c9f6f6feeebe9299, type: 3}
       insertIndex: 2
       addedObject: {fileID: 1862419700}
@@ -180377,6 +180839,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1273787261
 GameObject:
   m_ObjectHideFlags: 0
@@ -187913,6 +188383,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.012
   bucleTime: 0.03
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1324865749
 GameObject:
   m_ObjectHideFlags: 0
@@ -197286,6 +197764,8 @@ GameObject:
   - component: {fileID: 1392990401}
   m_Layer: 2
   m_Name: TriggerFinal (salirSinCoger)
+  m_Layer: 2
+  m_Name: TriggerFinDelJuego(TriggerSalirSinCoger)
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -197301,6 +197781,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -2.4664497, y: 0.20857143, z: -5.5292606}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5.799, y: 0.6, z: -0.008}
   m_LocalScale: {x: 1, y: 0.026146, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -197425,6 +197907,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  m_Size: {x: 0.24467076, y: 40.365417, z: 0.5559201}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1393383124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198740,6 +199224,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.09
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1403824277
 GameObject:
   m_ObjectHideFlags: 0
@@ -208853,6 +209345,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.01
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1454407945
 GameObject:
   m_ObjectHideFlags: 0
@@ -238864,6 +239364,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1503382229
 GameObject:
   m_ObjectHideFlags: 0
@@ -242571,6 +243079,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.023
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1001 &1522343642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244138,6 +244654,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.04
   bucleTime: 0.12
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1532212823
 GameObject:
   m_ObjectHideFlags: 0
@@ -289021,6 +289545,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.09
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1674079778
 GameObject:
   m_ObjectHideFlags: 0
@@ -311442,6 +311974,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1836009512
 GameObject:
   m_ObjectHideFlags: 0
@@ -312251,6 +312791,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.002
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1840599864
 GameObject:
   m_ObjectHideFlags: 0
@@ -312811,6 +313359,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1842330724
 GameObject:
   m_ObjectHideFlags: 0
@@ -319873,6 +320429,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &1877297117
 GameObject:
   m_ObjectHideFlags: 0
@@ -337390,8 +337954,10 @@ GameObject:
   - component: {fileID: 2003612903}
   - component: {fileID: 2003612905}
   - component: {fileID: 2003612904}
+  - component: {fileID: 2003612907}
+  - component: {fileID: 2003612906}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: 1Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -337506,6 +338072,120 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!82 &2003612906
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003612902}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2003612907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003612902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &2005159233
 GameObject:
   m_ObjectHideFlags: 0
@@ -351605,6 +352285,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &2089546432
 GameObject:
   m_ObjectHideFlags: 0
@@ -351970,6 +352658,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &2092034208
 GameObject:
   m_ObjectHideFlags: 0
@@ -353977,6 +354673,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.017
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &2105529893
 GameObject:
   m_ObjectHideFlags: 0
@@ -357182,6 +357886,14 @@ MonoBehaviour:
   lightBaseIntensity: 0
   lightScale: 0.005
   bucleTime: 0.07
+  m_Script: {fileID: 11500000, guid: 89808626556e3814c9e6fa42c46b196d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CandleTurnOffLights
+  soundController: {fileID: 0}
+  soundOffLight: {fileID: 0}
+  soundOffCandles: {fileID: 0}
+  spotLights: []
+  pointLights: []
 --- !u!1 &2127617376
 GameObject:
   m_ObjectHideFlags: 0
@@ -361824,9 +362536,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3551745457267708829}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00068}
-  m_LocalScale: {x: 0.9388075, y: 0.93880755, z: 0.93880755}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: -0.00078000245, z: -0.0006799921}
+  m_LocalScale: {x: 0.93880755, y: 0.9388073, z: 0.9388073}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 305279843}
@@ -386142,3 +386854,4 @@ SceneRoots:
   - {fileID: 472245199}
   - {fileID: 1932977759}
   - {fileID: 1656173037}
+  - {fileID: 352362731}
