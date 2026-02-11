@@ -36,6 +36,8 @@ public class CandleTurnOffLights : MonoBehaviour
             yaEjecutado = true;
             StartCoroutine(GeneralLightsOff());
         }
+
+
     }
 
     public void LightsOffFinalEventStart()  //recibe de... box collider, bloquea controles jugador, cierra la puerta, manda... LightsOffFinalEventStart()
