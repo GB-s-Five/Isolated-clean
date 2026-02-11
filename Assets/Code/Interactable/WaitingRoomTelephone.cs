@@ -15,16 +15,17 @@ public class WaitingRoomTelephone : MonoBehaviour , IInteractable
 
     [SerializeField] private AudioClip ringring;
     private bool hasInteracted;
-    
-    private PlayerMovement playerMovement;
 
     private AudioSource audioSource;
     private TriggerAudioThenAlarma triggerAudioThenAlarma;
+    [SerializeField] private FootstepsController footstepsController; // 
+
+    [SerializeField] private HeadBobSystem headBobSystem; // 
+
+    [SerializeField] private PlayerMovement playerMovement;
 
 
     public string GetInteractionText() => "use Telephone";
-    public void SetPlayerMovement(PlayerMovement movement) => playerMovement = movement;
-
     private void Awake()
     {
         hasInteracted = false;
@@ -49,6 +50,22 @@ public class WaitingRoomTelephone : MonoBehaviour , IInteractable
     
     private IEnumerator PlayTelephoneAudio1()
     {
+        
+        if (footstepsController != null) {
+            footstepsController.enabled = false; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
+
+        if (headBobSystem != null) {
+            headBobSystem.enabled = false; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
+
+        if (playerMovement != null) {
+            playerMovement.enabled = false; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
+
         if (audioSource == null)
            yield break;
         audioSource.loop = false;
@@ -68,6 +85,7 @@ public class WaitingRoomTelephone : MonoBehaviour , IInteractable
 
         triggerAudioThenAlarma.ActivateAlarm();
 
+  
 
     }
     public void PlayRing()

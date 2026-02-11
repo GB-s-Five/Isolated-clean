@@ -44,7 +44,11 @@ public class TriggerAudioThenAlarma : MonoBehaviour
     private static bool yaActivadoGlobal = false;  // NUNCA se repite
     private bool infiernoActivado = false;
     private bool todoDesactivado = false;
+    [SerializeField] private FootstepsController footstepsController; // 
 
+    [SerializeField] private HeadBobSystem headBobSystem; // 
+
+    [SerializeField] private PlayerMovement playerMovement;
     
     
 
@@ -62,6 +66,21 @@ public class TriggerAudioThenAlarma : MonoBehaviour
 
     public void ActivateAlarm()
     {
+        if (footstepsController != null) {
+            footstepsController.enabled = true; //Desbloquea el movimiento del jugador
+            Debug.Log($"{name}: DESbloquea el movimiento");
+        }
+
+        if (headBobSystem != null) {
+            headBobSystem.enabled = true; //Desbloquea el movimiento del jugador
+            Debug.Log($"{name}: DESbloquea el movimiento");
+        }
+
+        if (playerMovement != null) {
+            playerMovement.enabled = true; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
+
         fuente.spatialBlend = 0f;
         if (yaActivadoGlobal) return;
 

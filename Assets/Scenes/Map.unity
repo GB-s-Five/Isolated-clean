@@ -373437,7 +373437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.83800405
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalRotation.x
@@ -373445,7 +373445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.54566413
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalRotation.z
@@ -373457,7 +373457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 66.14
       objectReference: {fileID: 0}
     - target: {fileID: 4383883810249241157, guid: 8cec0b2d0c7892244a443cb92a4010de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -377815,9 +377815,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 159952b89b72be648b371a805c1fa93f, type: 3}
     - target: {fileID: 1613716859803137040, guid: 6e641e708add83e4a8b7eb247bc2bc96, type: 3}
+      propertyPath: headBobSystem
+      value: 
+      objectReference: {fileID: 2095341076}
+    - target: {fileID: 1613716859803137040, guid: 6e641e708add83e4a8b7eb247bc2bc96, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1620272868}
+    - target: {fileID: 1613716859803137040, guid: 6e641e708add83e4a8b7eb247bc2bc96, type: 3}
       propertyPath: telephoneAudio1
       value: 
       objectReference: {fileID: 8300000, guid: 3c3e7795e3aeaec47a41af60f56c0d90, type: 3}
+    - target: {fileID: 1613716859803137040, guid: 6e641e708add83e4a8b7eb247bc2bc96, type: 3}
+      propertyPath: footstepsController
+      value: 
+      objectReference: {fileID: 1620272875}
     - target: {fileID: 2404725541260544968, guid: 6e641e708add83e4a8b7eb247bc2bc96, type: 3}
       propertyPath: m_Name
       value: Telephone
@@ -377928,6 +377940,9 @@ MonoBehaviour:
   modeloAlarma: {fileID: 324875310}
   zonaSeguraCollider: {fileID: 1773496434}
   requiredInspectionID: Rayos
+  footstepsController: {fileID: 1620272875}
+  headBobSystem: {fileID: 2095341076}
+  playerMovement: {fileID: 1620272868}
 --- !u!82 &3955197255687295760
 AudioSource:
   m_ObjectHideFlags: 0
