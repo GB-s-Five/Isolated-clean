@@ -18,6 +18,8 @@ public class Papasusto : MonoBehaviour
         if (PlayerProgress.Instance != null && PlayerProgress.Instance.HasInspected(eventID))
         {
             this.enabled = false;   //desactiva el codigo
+            father.SetActive(false);
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -76,6 +78,7 @@ public class Papasusto : MonoBehaviour
                 PlayerProgress.Instance.RegisterInspection(eventID);
             }
             this.enabled = false;   //desactiva el codigo
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
