@@ -11,6 +11,15 @@ public class Papasusto : MonoBehaviour
     public AudioSource bum;
     [SerializeField] public Light[] Luces;
 
+    [SerializeField] private string eventID = "Papasusto Realizado";    //id
+
+    public void Start() //al start si la id es true 
+    {
+        if (PlayerProgress.Instance != null && PlayerProgress.Instance.HasInspected(eventID))
+        {
+            this.enabled = false;   //desactiva el codigo
+        }
+    }
 
     public void ToggleLights()
     {
@@ -60,6 +69,13 @@ public class Papasusto : MonoBehaviour
 
            
             father = Instantiate(tPosePrefab, lastPosition, lastRotation);
+
+            //guarda id player
+            if (PlayerProgress.Instance != null)
+            {
+                PlayerProgress.Instance.RegisterInspection(eventID);
+            }
+            this.enabled = false;   //desactiva el codigo
         }
     }
 }
