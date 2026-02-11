@@ -46,6 +46,7 @@ public class Papasusto : MonoBehaviour
 
         bum.Play();
     }
+    
     private void Switch()
     {
         if (father != null)
