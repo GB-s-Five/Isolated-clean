@@ -19,6 +19,7 @@ public class ScriptPlayerLive : MonoBehaviour
     [SerializeField] private string gameOverScene = "GameOver";
     public event Action OnPlayerDeath;
     public event Action OnPlayerDamaged;
+    private bool hasblinked = false;
     [SerializeField] private AudioSource heartbeatSource;
     [SerializeField] private float minVolume = 0.05f;
     [SerializeField] private float maxVolume = 1.5f;
@@ -70,9 +71,10 @@ public class ScriptPlayerLive : MonoBehaviour
             InvokeRepeating(nameof(UpdateEffect), 0f, 0.1f);
         }
         live -= damage;
-        if (live < 40 & live>39)
+        if (live < 40 && !hasblinked)
         {
             OnPlayerDamaged?.Invoke();
+            hasblinked = !hasblinked;
         }
         if (live < 0)
         {
@@ -131,6 +133,10 @@ public class ScriptPlayerLive : MonoBehaviour
             CancelInvoke(nameof(RegenerateLife)); // Deja de regenerar al llegar al m�ximo
             CancelInvoke(nameof(UpdateEffect));
             UpdateEffect(); // Actualiza efectos para vida completa
+        }
+        if (live > 40 && hasblinked)
+        {
+            hasblinked = !hasblinked;
         }
         UpdateHeartbeat();
         Debug.Log("Regenerando vida: " + live);

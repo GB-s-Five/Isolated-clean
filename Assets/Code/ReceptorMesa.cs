@@ -10,7 +10,7 @@ public class SalidaActivaMesaMovimiento : MonoBehaviour
     [SerializeField] private Transform mesa;
 
     [Header("Movimiento")]
-    [SerializeField] private Vector3 desplazamiento = new Vector3(0, -1f, 0);
+    [SerializeField] private Vector3 desplazamiento = new Vector3(-1f, 0, 0);
     [SerializeField] private float duracion = 1.2f;
 
     [Header("Clip jumpscare (arrastrar AudioClip)")]
@@ -38,12 +38,14 @@ public class SalidaActivaMesaMovimiento : MonoBehaviour
         {
             yaSeMovio = true;
             Debug.Log("Movimiento de mesa activado por inspección: " + requiredInspectionID);
-            StartCoroutine(MoverMesa());
+            //StartCoroutine(MoverMesa());
+            Invoke(nameof(MoverMesa),0f); // Pequeña demora antes de mover la mesa
+            //audioSource.PlayOneShot(RingAudio);
             //Destroy(gameObject);
         }
     }
 
-    private IEnumerator MoverMesa()
+    private void MoverMesa()
     {
         Vector3 inicio = mesa.position;
         Vector3 destino = inicio + desplazamiento;
@@ -57,7 +59,7 @@ public class SalidaActivaMesaMovimiento : MonoBehaviour
         {
             t += Time.deltaTime;
             mesa.position = Vector3.Lerp(inicio, destino, t / duracion);
-            yield return null;
+            
         }
 
         mesa.position = destino;
