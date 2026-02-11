@@ -14,6 +14,7 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
     private bool hasInteracted = false; // evita repetir la interacción
     [SerializeField] private PlayerMovement playerMovement; //para el movimiento del jugador
     [SerializeField] private FootstepsController footstepsController; // 
+    public GameObject luz;
 
     [SerializeField] private HeadBobSystem headBobSystem; // 
 
@@ -63,7 +64,12 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
             Debug.Log($"{name}: Bloquea el movimiento");
         }
 
-         if (headBobSystem != null) {
+        if (luz != null)
+        {
+            luz.SetActive(true); //Luz
+        }
+
+        if (headBobSystem != null) {
             headBobSystem.enabled = false; //bloquea el movimiento del jugador
             Debug.Log($"{name}: Bloquea el movimiento");
         }
@@ -116,7 +122,11 @@ public class XRMachineInteractable : MonoBehaviour, IInteractable
             childTrigger.SetActive(true);
             Debug.Log($"{name}: Child trigger activated.");
         }
-         if (xrayImage != null)
+        if (luz != null)
+        {
+            luz.SetActive(false); ; //Luz
+        }
+        if (xrayImage != null)
         {
             xrayImage.SetActive(true);
             Debug.Log($"{name}: xrayImageactivated.");
