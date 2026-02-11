@@ -179095,7 +179095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1231143731
 Transform:
   m_ObjectHideFlags: 0
@@ -201557,6 +201557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1392990397}
   - component: {fileID: 1392990400}
+  - component: {fileID: 1392990402}
   - component: {fileID: 1392990401}
   m_Layer: 2
   m_Name: TriggerFinalMurmuros (salirSinCoger)
@@ -201564,7 +201565,7 @@ GameObject:
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1392990397
 Transform:
   m_ObjectHideFlags: 0
@@ -201599,7 +201600,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20261247, y: 35.742313, z: 0.38954017}
+  m_Size: {x: 0.37559366, y: 35.742146, z: 0.38953832}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1392990401
 AudioSource:
@@ -201612,11 +201613,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: ec3f8c9a7e61ba8478c4afb98defa54a, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 353a5aa98a097d54c8b8af68ff7c148c, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -201698,6 +201699,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1392990402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392990396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963023d557f81bc4ba8e9588234a036a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrampaTriggerMurmullos
+  playerMovement: {fileID: 1620272868}
+  doorController: {fileID: 14811834}
+  audioSource: {fileID: 1392990401}
+  murmurosos: {fileID: 8300000, guid: 353a5aa98a097d54c8b8af68ff7c148c, type: 3}
+  sonidoPuerta: {fileID: 8300000, guid: c7fcabc0da2e84441b49312853e51ca1, type: 3}
+  candlesController: {fileID: 0}
 --- !u!1001 &1393383124
 PrefabInstance:
   m_ObjectHideFlags: 0

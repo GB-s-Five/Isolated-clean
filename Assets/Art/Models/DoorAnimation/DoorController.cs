@@ -28,7 +28,7 @@ public class DoorController : MonoBehaviour, IInteractable
     [SerializeField] private AudioClip sonidoAbrir;
     [SerializeField] private AudioClip sonidoCerrar;
     [SerializeField] private float angulo = 90f;
-    [SerializeField] private float tiempo = 1.2f;
+    public float tiempo = 1.2f;
 
     private AudioSource audio;
     private Quaternion closedRotation;
