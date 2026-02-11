@@ -37,4 +37,9 @@ public class PlayerProgress : MonoBehaviour
     {
         return inspectedObjects.Contains(id);
     }
+
+    public string GetAllIDs()
+    {
+        return string.Join(",", inspectedObjects);
+    }
 }

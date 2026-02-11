@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
@@ -50,7 +51,7 @@ public class DoorSlapPatientRoom : MonoBehaviour
         // Checkpoint
         if (Checkpointmanager.Instance != null)
         {
-            Debug.Log("Checkpoint alcanzado");
+            Debug.Log("Checkpoint alcanzado: " +String.Join("/",PlayerProgress.Instance.inspectedObjects));
             Checkpointmanager.Instance.SaveInstance(
                 PlayerProgress.Instance.inspectedObjects,
                 transform.position

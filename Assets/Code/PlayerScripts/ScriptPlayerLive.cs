@@ -74,7 +74,7 @@ public class ScriptPlayerLive : MonoBehaviour
         {
             OnPlayerDamaged?.Invoke();
         }
-        if (live <= 0)
+        if (live < 0)
         {
             live = 0;
             Die();
@@ -190,13 +190,19 @@ public class ScriptPlayerLive : MonoBehaviour
 
     public void Die()
     {
-
-         OnPlayerDeath?.Invoke();
+        Debug.LogWarning(PlayerProgress.Instance.GetAllIDs());
+        
         if (Checkpointmanager.Instance.playerPosition != new Vector3()) //checkpoint en vigor
         {
-            Debug.Log("checkpoint existente");
+            Debug.LogWarning("checkpoint existente");
             //Debug.LogWarning(Checkpointmanager.Instance.playerPosition);
-            PlayerProgress.Instance.inspectedObjects = Checkpointmanager.Instance.savedIDs;
+            PlayerProgress.Instance.inspectedObjects.Clear();
+
+            foreach (string id in Checkpointmanager.Instance.savedIDs)
+            {
+                PlayerProgress.Instance.inspectedObjects.Add(id);
+            }
+
         } else 
             PlayerProgress.Instance.inspectedObjects.Clear();
         
@@ -205,16 +211,7 @@ public class ScriptPlayerLive : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-       
-        // if (eyeBlinkEffect != null)
-        // {
-        //     // Ejecutar parpadeo antes de cargar la escena
-        //     eyeBlinkEffect.Blink(() => SceneManager.LoadScene(gameOverScene));
-        // }
-        // else
-        // {
-        //     SceneManager.LoadScene(gameOverScene);
-        // }
+        OnPlayerDeath?.Invoke();
        }
 
 
