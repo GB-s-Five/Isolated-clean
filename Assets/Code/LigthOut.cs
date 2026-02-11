@@ -1,16 +1,24 @@
+using System;
 using UnityEngine;
 
 public class LightOut : MonoBehaviour
 {
     [SerializeField] private DoorController door;
-    void Start()
+    [SerializeField] private AudioSource sound;
+    [SerializeField] private string idLuz;
+    [SerializeField] private Light LuzApagar;
+
+    private void Start()
     {
-        
+        if (PlayerProgress.Instance.HasInspected(idLuz))
+        {
+            DisableObject();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && door.isOpen)
+        if (other.CompareTag("Player") && door.isOpen && !PlayerProgress.Instance.HasInspected(idLuz))
         {
             Invoke(nameof(DisableObject), 3f);
         }
@@ -18,7 +26,7 @@ public class LightOut : MonoBehaviour
 
     void DisableObject()
     {
-        gameObject.SetActive(false);
+        
 
         //Obtener el padre del gameObject actual
         Transform parentTransform = transform.parent;
@@ -33,5 +41,12 @@ public class LightOut : MonoBehaviour
                 child.GetComponent<LigthTrigger>().enabled = false;
             }
         }
+        LuzApagar.enabled = false;
+        if (!PlayerProgress.Instance.HasInspected(idLuz))
+        {
+            sound.Play();
+            PlayerProgress.Instance.RegisterInspection(idLuz);
+        }
+        //gameObject.SetActive(false);
     }
 }

@@ -75,7 +75,6 @@ public class DoorController : MonoBehaviour, IInteractable
     {
         // sonido
         if (!isOpen && sonidoAbrir) audio.PlayOneShot(sonidoAbrir);
-        else if (isOpen && sonidoCerrar) audio.PlayOneShot(sonidoCerrar);
         int lado = 0;
         if (isOpen)
         {
@@ -100,6 +99,7 @@ public class DoorController : MonoBehaviour, IInteractable
         //Debug.Log(destino.eulerAngles + playerState.ToString());
 
         StopAllCoroutines();
+        LockDoor();
         StartCoroutine(Girar(destino));
     }
 
@@ -114,6 +114,10 @@ public class DoorController : MonoBehaviour, IInteractable
             yield return null;
         }
         transform.localRotation = final;
+        UnlockDoor();
+        if (!isOpen)
+            audio.PlayOneShot(sonidoCerrar);
+        
     }
 
 

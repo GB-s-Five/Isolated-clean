@@ -29,6 +29,7 @@ public class WaitingRoomTelephone : MonoBehaviour , IInteractable
     {
         hasInteracted = false;
         triggerAudioThenAlarma = GetComponent<TriggerAudioThenAlarma>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Interact()
@@ -72,7 +73,8 @@ public class WaitingRoomTelephone : MonoBehaviour , IInteractable
     public void PlayRing()
     {
         //Creamos un AudioSource automáticamente si no existe
-        audioSource = gameObject.AddComponent<AudioSource>();
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.loop = true;
         audioSource.clip = ringring;
