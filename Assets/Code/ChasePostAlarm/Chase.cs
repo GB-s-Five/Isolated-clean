@@ -21,7 +21,7 @@ public class Perseguidor : MonoBehaviour
         if (!chase || !player || !agent) return;
 
         agent.SetDestination(player.position);
-
+        Debug.Log(agent.velocity.magnitude + "Velocidad");
         if (animator)
         {
             float speedPercent = agent.velocity.magnitude / agent.speed;
@@ -56,6 +56,7 @@ public class Perseguidor : MonoBehaviour
             agent = GetComponent<NavMeshAgent>();
 
         agent.speed = velocity;
+
         agent.enabled = true;
         chase = true;
         agent.isStopped = false;
