@@ -8,6 +8,7 @@ public class EscController : MonoBehaviour
     public AudioSource tension; // música de tensión
     private bool isPaused = false;
     public static EscController instance;
+    [SerializeField] private string menu = "InitJuego";
 
     private List<AudioSource> pausedAudioSources = new List<AudioSource>();
     private float originalFixedDeltaTime;
@@ -93,12 +94,8 @@ public class EscController : MonoBehaviour
         Debug.Log("Juego reanudado. AudioSources reanudados.");
     }
 
-    public void QuitGame()
+    public void IraMenu()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        SceneManager.LoadScene(menu);
     }
 }

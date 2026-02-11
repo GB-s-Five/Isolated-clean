@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,7 @@ public class NuevoSciptGameOver : MonoBehaviour
 {
     [SerializeField] private string nextSceneName = "Map";
     [SerializeField] private string creditos = "Creditos";
+    [SerializeField] private string menu = "InitJuego";
     public AudioSource Malro;
     
 
@@ -22,12 +24,8 @@ public class NuevoSciptGameOver : MonoBehaviour
     {
         SceneManager.LoadScene(creditos);
     }
-    public void QuitGame()
+    public void IraMenu()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        SceneManager.LoadScene(menu);
     }
 }

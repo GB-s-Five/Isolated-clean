@@ -689,7 +689,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1109122409}
         m_TargetAssemblyTypeName: NuevoSciptGameOver, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: IraMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -893,6 +893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NuevoSciptGameOver
   nextSceneName: Map
   creditos: Creditos
+  menu: InitJuego
   Malro: {fileID: 1109122408}
 --- !u!1 &1131569699
 GameObject:
