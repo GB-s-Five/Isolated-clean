@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [DefaultExecutionOrder(-100)]
@@ -22,14 +24,19 @@ public class Checkpointmanager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
+    
     public void SaveInstance(HashSet<string> iDs, Vector3 position)
     {
         savedIDs.Clear();
+
         foreach (string id in iDs)
             savedIDs.Add(id);
 
         playerPosition = position;
         hasCheckpoint = true;
+
+        Debug.Log("Checkpointmanager: Saved " + savedIDs.Count + " IDs");
+        Debug.Log(String.Join("/", savedIDs));
     }
+
 }

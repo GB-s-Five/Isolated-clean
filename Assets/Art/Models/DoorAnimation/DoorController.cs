@@ -33,13 +33,14 @@ public class DoorController : MonoBehaviour, IInteractable
     private AudioSource audio;
     private Quaternion closedRotation;
 
-    private bool isLocked = false;  // 🔒 NUEVO 😈 😖 😭 😩 😳 😴 💔
+    private bool isLocked = false;  // NUEVO 
 
 
     void Start()
     {
         audio = gameObject.GetComponent<AudioSource>();
         closedRotation = transform.localRotation;
+        if (CanOpenDoor()) UnlockDoor();
     }
 
     public void LockDoor()
@@ -125,13 +126,13 @@ public class DoorController : MonoBehaviour, IInteractable
     {
         if (isLocked)
         {
-            //Debug.Log("The door is locked.");
+            Debug.LogWarning("The door is locked.");
             return;
         }
 
         if (!CanOpenDoor())
         {
-            //Debug.Log("The door is locked... you feel you should inspect something first.");
+            Debug.LogWarning("The door is locked... you feel you should inspect something first.");
             return;
         }
 
@@ -150,7 +151,11 @@ public class DoorController : MonoBehaviour, IInteractable
         foreach (string id in requiredInspections)
         {
             if (!PlayerProgress.Instance.HasInspected(id))
+            {
+                Debug.LogWarning(id);
+                Debug.LogWarning(PlayerProgress.Instance.GetAllIDs());
                 return false;
+            }
         }
         return true;
     }
