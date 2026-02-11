@@ -1,60 +1,104 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+using System.Collections.Generic;
 
 public class EscController : MonoBehaviour
 {
     public GameObject MenuESC;
+    public AudioSource tension; // música de tensión
     private bool isPaused = false;
     public static EscController instance;
-    public AudioSource tension;
+
+    private List<AudioSource> pausedAudioSources = new List<AudioSource>();
+    private float originalFixedDeltaTime;
+
     private void Awake()
     {
         instance = this;
         Time.timeScale = 1f;
+        originalFixedDeltaTime = Time.fixedDeltaTime; // guardamos valor original
         if (MenuESC != null) MenuESC.SetActive(false);
+
+        if (tension != null)
+            tension.ignoreListenerPause = true; // tensión no se pausa
     }
-    void Update()
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Pause();
+            if (isPaused)
+                Resume();
+            else
+                Pause();
         }
     }
+
     public void Pause()
     {
-        isPaused = !isPaused;
-        if (tension.isPlaying)
-        {
-            tension.Stop();
-        }
-        else
-        {
-            tension.Play();
-        }
-            
-        Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = isPaused;
-        Time.timeScale = isPaused ? 0f : 1f;
-        if (MenuESC != null)
-            MenuESC.SetActive(isPaused);
+        isPaused = true;
 
-        
-        Debug.Log("pausa= " + isPaused + "time=" + Time.timeScale);
+        // Pausar tiempo
+        Time.timeScale = 0f;
+        Time.fixedDeltaTime = 0f;
+
+        // Pausar todos los AudioSources activos excepto la música de tensión
+        pausedAudioSources.Clear();
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in allAudioSources)
+        {
+            if (a == tension) continue;
+            if (a.isPlaying)
+            {
+                a.Pause();
+                pausedAudioSources.Add(a); // guardamos los que estaban reproduciéndose
+            }
+        }
+
+        // Cursor y menú
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (MenuESC != null)
+            MenuESC.SetActive(true);
+
+        Debug.Log("Juego pausado. AudioSources pausados: " + pausedAudioSources.Count);
     }
+
     public void Resume()
     {
-        tension.Stop();
+        isPaused = false;
+
+        // Restaurar tiempo
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Map");
-        if (MenuESC != null) MenuESC.SetActive(false);
+        Time.fixedDeltaTime = originalFixedDeltaTime;
+
+        // Reanudar todos los AudioSources que estaban reproduciéndose
+        foreach (AudioSource a in pausedAudioSources)
+        {
+            if (a != null)
+                a.UnPause();
+        }
+
+        // Limpiar la lista
+        pausedAudioSources.Clear();
+
+        // Cursor y menú
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        if (MenuESC != null)
+            MenuESC.SetActive(false);
+
+        Debug.Log("Juego reanudado. AudioSources reanudados.");
     }
+
     public void QuitGame()
-{
+    {
 #if UNITY_EDITOR
-    UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
-}
+    }
 }

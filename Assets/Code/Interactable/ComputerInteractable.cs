@@ -45,7 +45,6 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
 
         hasInteracted = true;
 
-        //Cerrar y bloquear puerta
         // Cerrar y bloquear puerta
         if (doorToLock != null)
         {
