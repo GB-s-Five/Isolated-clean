@@ -31,11 +31,11 @@ public class CandleTurnOffLights : MonoBehaviour
     void Update()
     {
         // Tecla 0 (fila superior del teclado)
-        if (Input.GetKeyDown(KeyCode.Alpha0) && !yaEjecutado)
-        {
-            yaEjecutado = true;
-            StartCoroutine(GeneralLightsOff());
-        }
+     //   if (Input.GetKeyDown(KeyCode.Alpha0) && !yaEjecutado)
+      //  {
+      //      yaEjecutado = true;
+      //      StartCoroutine(GeneralLightsOff());
+      //  }
 
 
     }
@@ -43,15 +43,13 @@ public class CandleTurnOffLights : MonoBehaviour
     public void LightsOffFinalEventStart()  //recibe de... box collider, bloquea controles jugador, cierra la puerta, manda... LightsOffFinalEventStart()
     {
         StartCoroutine(GeneralLightsOff());
-
-        //faltaran prevenciones
     }
 
 
 
     private IEnumerator GeneralLightsOff()
     {
-        yield return new WaitForSeconds(1f);    //se cierra la puerta, espera 1s...
+        yield return new WaitForSeconds(5f);    //se cierra la puerta, espera 1s...
         SpotLightsOff();
 
         yield return new WaitForSeconds(3f);    //se apagan los spotLights y siguen los pointLights
