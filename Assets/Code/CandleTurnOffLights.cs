@@ -26,9 +26,6 @@ public class CandleTurnOffLights : MonoBehaviour
     //CONTROLES DE PRUEBA
     private bool yaEjecutado = false;
 
-
-
-    void Update()
     void Update()      
     {
         // Tecla 0 (fila superior del teclado)
@@ -80,35 +77,37 @@ public class CandleTurnOffLights : MonoBehaviour
 
     private IEnumerator PointLightsRandomizeOff()       //POINTS LIGHTS
     {
-    {  
-        List<Light> lights = new List<Light>(pointLights);
-
-        for (int i = 0; i < lights.Count; i++)
         {
-            Light temp = lights[i];
-            int randomIndex = Random.Range(i, lights.Count);
-            lights[i] = lights[randomIndex];
-            lights[randomIndex] = temp;
-        }
+            List<Light> lights = new List<Light>(pointLights);
 
-        float delay = 10f / lights.Count;
-
-        foreach (Light light in lights)
-        {
-            if (light != null)
+            for (int i = 0; i < lights.Count; i++)
             {
-                light.enabled = false;
-
-                bool reproduceSound = false;    //sonido apagar velas-------------------
-
-                if (!reproduceSound && soundController && soundOffLight)    //----------
-                {
-                {   
-                    soundController.PlayOneShot(soundOffCandles);   //------------------
-                    reproduceSound = true;                          //------------------
-                }           //sonido apagar velas fin-----------------------------------
+                Light temp = lights[i];
+                int randomIndex = Random.Range(i, lights.Count);
+                lights[i] = lights[randomIndex];
+                lights[randomIndex] = temp;
             }
-            yield return new WaitForSeconds(delay);
+
+            float delay = 10f / lights.Count;
+
+            foreach (Light light in lights)
+            {
+                if (light != null)
+                {
+                    light.enabled = false;
+
+                    bool reproduceSound = false;    //sonido apagar velas-------------------
+
+                    if (!reproduceSound && soundController && soundOffLight)    //----------
+                    {
+                        {
+                            soundController.PlayOneShot(soundOffCandles);   //------------------
+                            reproduceSound = true;                          //------------------
+                        }           //sonido apagar velas fin-----------------------------------
+                    }
+                    yield return new WaitForSeconds(delay);
+                }
+            }
         }
     }
 }
