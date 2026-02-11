@@ -41,7 +41,7 @@ public class TriggerAudioThenAlarma : MonoBehaviour
 
 
     private AudioSource fuente;
-    private static bool yaActivadoGlobal = false;  // NUNCA se repite
+    private bool yaActivadoGlobal = false; 
     private bool infiernoActivado = false;
     private bool todoDesactivado = false;
     [SerializeField] private FootstepsController footstepsController; // 
@@ -54,6 +54,10 @@ public class TriggerAudioThenAlarma : MonoBehaviour
 
     private void Awake()
     {
+        yaActivadoGlobal = false;
+        todoDesactivado = false;
+        infiernoActivado = false;
+
         fuente = GetComponent<AudioSource>();
         fuente.playOnAwake = false;
         
@@ -159,11 +163,16 @@ public class TriggerAudioThenAlarma : MonoBehaviour
 
     void ApagarTodo()
     {
+        fuente.loop = false;
+        yaActivadoGlobal = false;
+        infiernoActivado = false;
         foreach (Light luz in lucesAlarma)
             if (luz) luz.enabled = false;
 
         foreach (GameObject ojo in spheresOjos)
             if (ojo) ojo.SetActive(false);
+        
+         
     }
 
     private void OnDrawGizmosSelected()
@@ -171,5 +180,10 @@ public class TriggerAudioThenAlarma : MonoBehaviour
         Gizmos.color = Color.magenta;
         BoxCollider box = GetComponent<BoxCollider>();
         if (box) Gizmos.DrawWireCube(transform.position, box.size);
+    }
+
+    private void OnDestroy()
+    {
+        LightsEvent = null;
     }
 }
