@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CandleTurnOffLights : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class CandleTurnOffLights : MonoBehaviour
     [Header("All Lights")]
     [SerializeField] private List<Light> spotLights;
     [SerializeField] private List<Light> pointLights;
+
+    [Header("Final Sequence")]
+    [SerializeField] private Light extraLight;
+    [SerializeField] private GameObject extraObject;
+    [SerializeField] private AudioClip finalSound;
 
     //CONTROLES DE PRUEBA
     private bool yaEjecutado = false;
@@ -53,6 +59,26 @@ public class CandleTurnOffLights : MonoBehaviour
         yield return new WaitForSeconds(3f);    //se apagan los spotLights y siguen los pointLights
         yield return StartCoroutine(PointLightsRandomizeOff());
 
+        yield return new WaitForSeconds(1f);
+        // Enciende la luz primero
+        if (extraLight != null)
+            extraLight.enabled = true;
+
+        yield return new WaitForSeconds(1f); // pequeño delay dramático
+
+        // Luego aparece el GameObject
+        if (extraObject != null)
+            extraObject.SetActive(true);
+
+        // Reproduce el sonido final
+        if (soundController != null && finalSound != null)
+            soundController.PlayOneShot(finalSound);
+        
+        // Espera 5 segundos antes de cambiar de escena
+        yield return new WaitForSeconds(5f);
+
+        // Carga la escena de créditos
+        SceneManager.LoadScene("Creditos");
     }
 
 
@@ -104,6 +130,8 @@ public class CandleTurnOffLights : MonoBehaviour
                 }           //sonido apagar velas fin-----------------------------------
             }
             yield return new WaitForSeconds(delay);
+
+
         }
     }
 }
