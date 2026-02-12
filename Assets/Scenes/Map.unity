@@ -44994,7 +44994,6 @@ MonoBehaviour:
   agent: {fileID: 324875314}
   parameterSpeed: Speed
   animator: {fileID: 324875315}
-  audioSource: {fileID: 0}
   audioSource: {fileID: 324875321}
   trampaTriggerMurmullos: {fileID: 1392990396}
 --- !u!82 &324875321
