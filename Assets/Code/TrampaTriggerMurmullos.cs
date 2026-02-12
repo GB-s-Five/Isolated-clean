@@ -17,6 +17,8 @@ public class TrampaTriggerMurmullos : MonoBehaviour
     [SerializeField] private HeadBobSystem headBobSystem;
     [SerializeField] private FootstepsController footstepsController;
     [SerializeField] private CandleTurnOffLights candlesController;
+    
+
     private void Awake()
     {
         audioSource.clip = murmurosos;
