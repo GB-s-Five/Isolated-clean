@@ -62,7 +62,7 @@ public class CandleTurnOffLights : MonoBehaviour
         yield return new WaitForSeconds(1f);
         // Enciende la luz primero
         if (extraLight != null)
-            extraLight.enabled = true;
+            extraLight.enabled =true;
 
         yield return new WaitForSeconds(1f); // pequeño delay dramático
 
