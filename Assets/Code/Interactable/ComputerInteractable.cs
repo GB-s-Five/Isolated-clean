@@ -11,12 +11,14 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
     [SerializeField] private XRMachineInteractable machine;
 
     [Header("Required Inspection ID")]
-    [SerializeField] private string requiredInspectionID = "NoteOnTable";
+    [SerializeField] private string requiredInspectionID = "Lightmessage";
+    [SerializeField] private string idToLookDoor = "Rayos";
 
     [Header("Door to lock during audio")]
     [SerializeField] private DoorController doorToLock;
+    [SerializeField] private AfterXRayAudio afterXRayAudio;
 
-    
+
     private bool hasInteracted = false;
 
     private void Awake()
@@ -31,6 +33,10 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
                 Debug.LogWarning("Audioclip es nulo en TriggerSonido:"+ gameObject.ToString());
         }
         doctorAudio.playOnAwake = false;
+    }
+    private void Start()
+    {
+        idToLookDoor = afterXRayAudio.idToGive;
     }
     public string GetInteractionText() => "use computer";
 
@@ -51,8 +57,11 @@ public class ComputerInteractable : MonoBehaviour, IInteractable
             if (doorToLock.isOpen)
             {
                 doorToLock.Toggle();
+
+
             }
             doorToLock.LockDoor();
+            doorToLock.requiredInspections[0] = idToLookDoor; // Asegura que la puerta solo se desbloquee después de inspeccionar el objeto requerido
         }
 
         StartCoroutine(PlayDoctorAudio());

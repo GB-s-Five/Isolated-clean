@@ -23,7 +23,7 @@ public class DoorController : MonoBehaviour, IInteractable
 
     private PlayerState playerState = PlayerState.Out;
 
-    [SerializeField] private string[] requiredInspections;
+    [SerializeField] public string[] requiredInspections;
     
     [SerializeField] private AudioClip sonidoAbrir;
     [SerializeField] private AudioClip sonidoCerrar;
