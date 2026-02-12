@@ -8,7 +8,7 @@ public class AfterXRayAudio : MonoBehaviour
 {
     [Header("Audio & ID")]
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private string idToGive = "Rayos";
+    [SerializeField] public string idToGive = "Rayos";
 
     [Header("Required Inspection ID")]
     [SerializeField] private string requiredInspectionID;
