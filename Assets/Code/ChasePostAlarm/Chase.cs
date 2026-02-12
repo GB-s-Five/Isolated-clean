@@ -14,6 +14,9 @@ public class Perseguidor : MonoBehaviour
     public string parameterSpeed = "Speed";
     public Animator animator;
     [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private GameObject trampaTriggerMurmullos;
+
     
     private bool chase = false;
 
@@ -49,6 +52,12 @@ public class Perseguidor : MonoBehaviour
             animator.SetFloat(parameterSpeed, 0f);
 
         gameObject.SetActive(false);
+
+         if (trampaTriggerMurmullos != null) {
+            trampaTriggerMurmullos.SetActive(true); 
+        
+        
+       }
     }
 
     // LLAMADO DESDE ZONASEGURA

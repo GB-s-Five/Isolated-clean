@@ -36,8 +36,6 @@ public class CandleTurnOffLights : MonoBehaviour
       //      yaEjecutado = true;
       //      StartCoroutine(GeneralLightsOff());
       //  }
-
-
     }
 
     public void LightsOffFinalEventStart()  //recibe de... box collider, bloquea controles jugador, cierra la puerta, manda... LightsOffFinalEventStart()
@@ -89,7 +87,7 @@ public class CandleTurnOffLights : MonoBehaviour
             lights[randomIndex] = temp;
         }
 
-        float delay = 10f / lights.Count;
+        float delay = lights.Count / 25f;
 
         foreach (Light light in lights)
         {
