@@ -11,7 +11,7 @@ public class Botones : MonoBehaviour
     public void Awake()
     {
         cajita.Play();
-        Invoke(nameof(Playloop), 1f);
+        Invoke(nameof(Playloop), 3f);
     }
 
     private void Playloop()
