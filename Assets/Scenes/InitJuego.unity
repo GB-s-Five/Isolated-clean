@@ -154,6 +154,7 @@ MonoBehaviour:
   creditos: Creditos
   cajita: {fileID: 222506712}
   loop: {fileID: 222506713}
+  loopClip: {fileID: 8300000, guid: 8adb5dd9cf4ebc64d8e656ab3396e1e8, type: 3}
 --- !u!4 &222506711
 Transform:
   m_ObjectHideFlags: 0

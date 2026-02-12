@@ -42,7 +42,7 @@ public class EscController : MonoBehaviour
         // Pausar tiempo
         Time.timeScale = 0f;
         Time.fixedDeltaTime = 0f;
-
+        tension.Play();
         // Pausar todos los AudioSources activos excepto la música de tensión
         pausedAudioSources.Clear();
         AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
@@ -69,7 +69,7 @@ public class EscController : MonoBehaviour
     public void Resume()
     {
         isPaused = false;
-
+        tension.Stop();
         // Restaurar tiempo
         Time.timeScale = 1f;
         Time.fixedDeltaTime = originalFixedDeltaTime;
@@ -96,6 +96,9 @@ public class EscController : MonoBehaviour
 
     public void IraMenu()
     {
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = originalFixedDeltaTime;
         SceneManager.LoadScene(menu);
+
     }
 }

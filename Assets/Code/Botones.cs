@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,16 +8,25 @@ public class Botones : MonoBehaviour
     [SerializeField] private string creditos = "Creditos";
     public AudioSource cajita;
     public AudioSource loop;
+    public AudioClip loopClip;
 
-    public void Awake()
+    public void OnEnable()
+    {
+        //cajita.Play();
+        //Invoke(nameof(Playloop), 3f);
+        StartCoroutine("PlaySounds");
+    }
+    IEnumerator PlaySounds()
     {
         cajita.Play();
-        Invoke(nameof(Playloop), 3f);
-    }
+        yield return new WaitForSeconds(4);
+        loop.Play();
 
+    }
     private void Playloop()
     {
-        loop.Play();
+        Debug.Log("He entrado aqui");
+        loop.PlayOneShot(loopClip);
     }
 
     public void StartGame()
@@ -30,10 +40,14 @@ public class Botones : MonoBehaviour
     }
     public void QuitGame()
     {
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
                 Application.Quit();
-        #endif
+#endif
+    }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 }
