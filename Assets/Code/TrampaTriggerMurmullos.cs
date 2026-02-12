@@ -20,7 +20,6 @@ public class TrampaTriggerMurmullos : MonoBehaviour
     private void Awake()
     {
         audioSource.clip = murmurosos;
-        audioSource.Play();
     }
 
     private void OnTriggerEnter(Collider other)
