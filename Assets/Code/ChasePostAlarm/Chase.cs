@@ -16,6 +16,11 @@ public class Perseguidor : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private GameObject trampaTriggerMurmullos;
+    [SerializeField] private GameObject foto;
+    [SerializeField] private GameObject[] objetosBorrar;
+
+
+    
 
     
     private bool chase = false;
@@ -53,11 +58,21 @@ public class Perseguidor : MonoBehaviour
 
         gameObject.SetActive(false);
 
-         if (trampaTriggerMurmullos != null) {
+        if (trampaTriggerMurmullos != null) {
             trampaTriggerMurmullos.SetActive(true); 
+        }
+
+        if (foto != null) {
+            foto.SetActive(true); 
+        }
+
         
-        
-       }
+        foreach (GameObject gameObject in objetosBorrar)
+        {
+            if (gameObject != null)
+                gameObject.SetActive(false);
+           
+        }
     }
 
     // LLAMADO DESDE ZONASEGURA
