@@ -13,7 +13,8 @@ public class Perseguidor : MonoBehaviour
     [Header("=== ANIMATOR ===")]
     public string parameterSpeed = "Speed";
     public Animator animator;
-
+    [SerializeField] private AudioSource audioSource;
+    
     private bool chase = false;
 
     void Update()
@@ -42,6 +43,8 @@ public class Perseguidor : MonoBehaviour
 
         agent.isStopped = true;
 
+         audioSource.Pause();
+
         if (animator)
             animator.SetFloat(parameterSpeed, 0f);
 
@@ -51,6 +54,7 @@ public class Perseguidor : MonoBehaviour
     // LLAMADO DESDE ZONASEGURA
     public void ActiveChase()
     {
+        audioSource.Play();
 
         if (!agent)
             agent = GetComponent<NavMeshAgent>();
