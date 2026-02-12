@@ -6,7 +6,7 @@ public class DoorSlapPatientRoom : MonoBehaviour
 {
     [Header("Inspectable Object ID Required")]
     [SerializeField] private string requiredInspectionID = "LightMessage";
-
+    [SerializeField] private string givedID = "doorSlapPatientRoom";
     [Header("Audio")]
     [SerializeField] private AudioSource doorSlapAudio;
 
@@ -16,10 +16,11 @@ public class DoorSlapPatientRoom : MonoBehaviour
     [SerializeField] private Vector3 rotacionCerradaEuler; // ROTACIÓN CERRADA
 
     private bool hasTriggered = false;
+    
 
     private void OnTriggerEnter(Collider other)
     {
-        if (hasTriggered) return;
+        if (PlayerProgress.Instance.HasInspected(givedID)) return;
         if (!other.CompareTag("Player")) return;
 
         if (!PlayerProgress.Instance.HasInspected(requiredInspectionID))
@@ -47,7 +48,7 @@ public class DoorSlapPatientRoom : MonoBehaviour
         }
 
         hasTriggered = true;
-
+        PlayerProgress.Instance.RegisterInspection(givedID);
         // Checkpoint
         if (Checkpointmanager.Instance != null)
         {
@@ -57,6 +58,7 @@ public class DoorSlapPatientRoom : MonoBehaviour
                 transform.position
             );
         }
+        
     }
 
     private System.Collections.IEnumerator CerrarPuerta()

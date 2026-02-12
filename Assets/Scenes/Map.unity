@@ -140986,6 +140986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorSlapPatientRoom
   requiredInspectionID: LightMessage
+  givedID: doorSlapPatientRoom
   doorSlapAudio: {fileID: 967274174}
   puerta: {fileID: 1196358142}
   velocidadCierre: 0.15
@@ -391998,7 +391999,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 1930baa99c6728249858d69d7e78a298, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3a430bcce493fb94cb6ef145ee556d7d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
