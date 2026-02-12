@@ -14,11 +14,15 @@ public class TrampaTriggerMurmullos : MonoBehaviour
     [SerializeField] private AudioClip murmurosos;
     [SerializeField] private AudioClip sonidoPuerta;
 
+    [SerializeField] private HeadBobSystem headBobSystem;
+    [SerializeField] private FootstepsController footstepsController;
     [SerializeField] private CandleTurnOffLights candlesController;
     private void Awake()
     {
         audioSource.clip = murmurosos;
+        audioSource.Play();
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
@@ -29,6 +33,17 @@ public class TrampaTriggerMurmullos : MonoBehaviour
 
     void congelarJugador()
     {
+               
+        if (footstepsController != null) {
+            footstepsController.enabled = false; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
+
+        if (headBobSystem != null) {
+            headBobSystem.enabled = false; //bloquea el movimiento del jugador
+            Debug.Log($"{name}: Bloquea el movimiento");
+        }
+
         if (playerMovement != null)
         {
             playerMovement.enabled = false; //bloquea el movimiento del jugador
