@@ -18,7 +18,7 @@ public class Perseguidor : MonoBehaviour
     [SerializeField] private GameObject trampaTriggerMurmullos;
     [SerializeField] private GameObject foto;
     [SerializeField] private GameObject[] objetosBorrar;
-
+    
 
     
 
@@ -59,7 +59,8 @@ public class Perseguidor : MonoBehaviour
         gameObject.SetActive(false);
 
         if (trampaTriggerMurmullos != null) {
-            trampaTriggerMurmullos.SetActive(true); 
+            trampaTriggerMurmullos.SetActive(true);
+            trampaTriggerMurmullos.GetComponent<AudioSource>().Play();
         }
 
         if (foto != null) {

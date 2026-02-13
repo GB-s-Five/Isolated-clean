@@ -16,7 +16,7 @@ public class WaitingRoomTelephone : MonoBehaviour , IInteractable
     [SerializeField] private AudioClip ringring;
     private bool hasInteracted;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private TriggerAudioThenAlarma triggerAudioThenAlarma;
     [SerializeField] private FootstepsController footstepsController; // 
 
@@ -76,6 +76,7 @@ public class WaitingRoomTelephone : MonoBehaviour , IInteractable
         if (telephoneAudio1 != null)
         {
             audioSource.PlayOneShot(telephoneAudio1);
+            audioSource.volume = 0.1f;
             hasInteracted = true;
         }
         Debug.Log("Telephone audio finished. Alarm system enabled!");

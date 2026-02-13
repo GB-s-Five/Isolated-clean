@@ -14,12 +14,12 @@ public class ZonaSegura : MonoBehaviour
     public Perseguidor chaser; // I. se referencia al perseguidor
 
     private AudioSource fuenteJumpscare;
-    private bool yaSonóJumpscare = false;
+    private bool yaSonoJumpscare = false;
 
     private void Awake()
     {
         // CREAR AUDIOSOURCE AUTOMÁTICO
-        fuenteJumpscare = gameObject.AddComponent<AudioSource>();
+        fuenteJumpscare = gameObject.GetComponent<AudioSource>();
         fuenteJumpscare.playOnAwake = false;
         fuenteJumpscare.loop = false;
         fuenteJumpscare.spatialBlend = 0f;  // 2D fuerte
@@ -28,9 +28,9 @@ public class ZonaSegura : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player") || yaSonóJumpscare) return;
+        if (!other.CompareTag("Player") || yaSonoJumpscare) return;
 
-        yaSonóJumpscare = true;
+        yaSonoJumpscare = true;
 
         // 1. REPRODUCIR JUMPSCARE
         if (jumpscareClip != null)

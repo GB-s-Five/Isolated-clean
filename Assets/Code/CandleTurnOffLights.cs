@@ -29,6 +29,8 @@ public class CandleTurnOffLights : MonoBehaviour
     [SerializeField] private GameObject extraObject;
     [SerializeField] private AudioClip finalSound;
 
+    [SerializeField] public GameObject player;
+
     //CONTROLES DE PRUEBA
     private bool yaEjecutado = false;
 
@@ -77,6 +79,11 @@ public class CandleTurnOffLights : MonoBehaviour
         // Luego aparece el GameObject
         if (extraObject != null)
             extraObject.SetActive(true);
+
+        //El player mira hacia el objeto usando LookAt
+
+        if (player != null && extraObject != null)
+            player.transform.LookAt(extraObject.transform);
 
         // Reproduce el sonido final
         if (soundController != null && finalSound != null)
