@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEditor.ShaderGraph;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class FootstepsController : MonoBehaviour
