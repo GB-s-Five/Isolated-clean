@@ -36,6 +36,14 @@ public class CandleTurnOffLights : MonoBehaviour
 
     void Update()
     {
+         //Tecla 0 (fila superior del teclado)
+        //if (Input.GetKeyDown(KeyCode.Alpha0) && !yaEjecutado)
+        //{
+        //    yaEjecutado = true;
+        //    StartCoroutine(GeneralLightsOff());
+        //}
+
+
         // Tecla 0 (fila superior del teclado)
      //   if (Input.GetKeyDown(KeyCode.Alpha0) && !yaEjecutado)
       //  {

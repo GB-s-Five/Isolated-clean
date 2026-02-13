@@ -13,6 +13,13 @@ public class TranCodigo : MonoBehaviour
         StartCoroutine(FinVideo());
     }
 
+    private void Update()   //esc vuelve al menu
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(Menu);
+        }
+    }
     IEnumerator FinVideo()
     {
         yield return new WaitForSeconds((float)videoPlayer.clip.length);

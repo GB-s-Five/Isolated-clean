@@ -11,7 +11,7 @@ public class Papasusto : MonoBehaviour
     public AudioSource bum;
     [SerializeField] public Light[] Luces;
 
-    [SerializeField] private string eventID = "Papasusto Realizado";    //id
+    [SerializeField] private string eventID = "PapasustoRealizado";    //id
 
     public void Start() //al start si la id es true 
     {
@@ -50,6 +50,7 @@ public class Papasusto : MonoBehaviour
         Invoke(nameof(ToggleFlicker), 4);
         Invoke(nameof(PlayBum), 2f);
         //tension.Play();
+
     }
 
     private void PlayBum()
@@ -76,6 +77,7 @@ public class Papasusto : MonoBehaviour
             if (PlayerProgress.Instance != null)
             {
                 PlayerProgress.Instance.RegisterInspection(eventID);
+
             }
             this.enabled = false;   //desactiva el codigo
             GetComponent<BoxCollider>().enabled = false;
