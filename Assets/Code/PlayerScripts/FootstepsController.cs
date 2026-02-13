@@ -31,7 +31,7 @@ public class FootstepsController : MonoBehaviour
     {
         bool isMoving = IsMoving();
         bool isLeaning = controls.Player.Lean.triggered;
-        bool isRunning = controls.Player.Sprint.triggered;
+        //bool isRunning = controls.Player.Sprint.triggered;
 
         if (!isMoving && !isLeaning)
         {
@@ -39,7 +39,7 @@ public class FootstepsController : MonoBehaviour
             return;
         }
 
-        float currentInterval = isRunning ? runStepInterval : walkStepInterval;
+        float currentInterval =  walkStepInterval;
         stepTimer += Time.deltaTime;
 
         if (stepTimer >= currentInterval)

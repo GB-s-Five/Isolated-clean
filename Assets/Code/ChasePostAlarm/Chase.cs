@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,10 +20,12 @@ public class Perseguidor : MonoBehaviour
     [SerializeField] private GameObject foto;
     [SerializeField] private GameObject[] objetosBorrar;
     
+    public AudioSource bum;
 
-    
 
-    
+
+
+
     private bool chase = false;
 
     void Update()
@@ -51,7 +54,8 @@ public class Perseguidor : MonoBehaviour
 
         agent.isStopped = true;
 
-         audioSource.Pause();
+        audioSource.Pause();
+        bum.Play();
 
         if (animator)
             animator.SetFloat(parameterSpeed, 0f);
@@ -74,8 +78,8 @@ public class Perseguidor : MonoBehaviour
                 gameObject.SetActive(false);
            
         }
+        
     }
-
     // LLAMADO DESDE ZONASEGURA
     public void ActiveChase()
     {

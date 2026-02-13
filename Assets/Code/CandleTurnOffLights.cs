@@ -118,6 +118,9 @@ public class CandleTurnOffLights : MonoBehaviour
 
     private IEnumerator PointLightsRandomizeOff()       //POINTS LIGHTS
     {
+        soundController.loop = true;
+        soundController.clip = soundOffCandles;
+        soundController.Play();
         List<Light> lights = new List<Light>(pointLights);
 
         for (int i = 0; i < lights.Count; i++)
@@ -128,7 +131,7 @@ public class CandleTurnOffLights : MonoBehaviour
             lights[randomIndex] = temp;
         }
 
-        float delay = lights.Count / 25f;
+        float delay = 0.5f;
 
         foreach (Light light in lights)
         {
@@ -140,7 +143,7 @@ public class CandleTurnOffLights : MonoBehaviour
 
                 if (!reproduceSound && soundController && soundOffLight)    //----------
                 {
-                    soundController.PlayOneShot(soundOffCandles);   //------------------
+                    //------------------
                     reproduceSound = true;                          //------------------
                 }           //sonido apagar velas fin-----------------------------------
             }

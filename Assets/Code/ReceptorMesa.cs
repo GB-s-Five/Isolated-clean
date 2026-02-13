@@ -21,7 +21,8 @@ public class SalidaActivaMesaMovimiento : MonoBehaviour
 
     private AudioSource audioSource;
     private bool yaSeMovio = false;
-    [SerializeField] private float velocidad;
+    [SerializeField] private float distanciaAvance;
+    [SerializeField] private float ciclo;
 
     private void Awake()
     {
@@ -56,16 +57,18 @@ public class SalidaActivaMesaMovimiento : MonoBehaviour
         if (jumpscareClip != null)
             audioSource.PlayOneShot(jumpscareClip);
 
-        while (Mathf.Abs(distancia) > 1f)
+        while (distancia < 1f)
         {
+            Debug.Log("distacia = " + distancia);
             //t += Time.deltaTime;
             Debug.Log("t = " + t);
-            mesa.position -= new Vector3 (velocidad,0,0);
-            yield return new WaitForSeconds(0.005f);
+            mesa.position -= new Vector3 (distanciaAvance,0,0);
+            distancia =- mesa.position.x; 
+            yield return new WaitForSeconds(ciclo);
             
         }
 
-        //mesa.position = destino;
+        mesa.position = destino;
 
  
     }

@@ -37,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
         controls.Player.Lean.performed += ctx => leanInput = ctx.ReadValue<float>();
         controls.Player.Lean.canceled += ctx => leanInput = 0f;
 
-        controls.Player.Sprint.started += ctx => isSprinting = true;
-        controls.Player.Sprint.canceled += ctx => isSprinting = false;
+        //controls.Player.Sprint.started += ctx => isSprinting = true;
+        //controls.Player.Sprint.canceled += ctx => isSprinting = false;
     }
 
     private void OnEnable() => controls.Player.Enable();
